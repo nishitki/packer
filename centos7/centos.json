@@ -1,0 +1,81 @@
+{
+  "builders":
+  [
+    {
+      "type": "qemu",
+      "iso_url": "http://ftp.riken.jp/Linux/centos/7.1.1503/isos/x86_64/CentOS-7-x86_64-Minimal-1503-01.iso",
+      "iso_checksum": "d07ab3e615c66a8b2e9a50f4852e6a77",
+      "iso_checksum_type": "md5",
+      "output_directory": "output",
+      "ssh_wait_timeout": "30s",
+      "shutdown_command": "shutdown -P now",
+      "disk_size": 5000,
+      "format": "qcow2",
+      "headless": true,
+      "accelerator": "kvm",
+      "http_directory": "httpdir",
+      "http_port_min": 10082,
+      "http_port_max": 10089,
+      "ssh_host_port_min": 2222,
+      "ssh_host_port_max": 2229,
+      "ssh_username": "root",
+      "ssh_password": "Password",
+      "qemu_binary": "/usr/libexec/qemu-kvm",
+      "ssh_port": 22,
+      "ssh_wait_timeout": "900m",
+      "vm_name": "test",
+      "net_device": "virtio-net",
+      "disk_interface": "virtio",
+      "boot_wait": "5s",
+      "qemuargs": [ "-serial", "file:serial.out" ],
+      
+      "boot_command":
+      [
+        "<tab>",
+        " append console=ttyS0,115200n8 ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/centos7-ks.cfg",
+        "<enter>"
+      ]
+    }
+  ],
+ "provisioners":
+  [
+    {
+      "type": "shell",
+      "inline": [
+        "sleep 3",
+        "yum -y update",
+        "yum -y install cloud-init cloud-utils-growpart dracut-modules-growroot",
+        "echo \"NOZEROCONF=yes\" >> /etc/sysconfig/network",
+        "adduser nishiki",
+        "echo 'nishiki:MySecretPassword' |chpasswd",
+        "mkdir /home/nishiki/.ssh",
+        "chown nishiki:nishiki /home/nishiki/.ssh",
+        "chmod 700 /home/nishiki/.ssh",
+        "echo \"nishiki ALL=(ALL) ALL\" >> /etc/sudoers",
+	"yum clean all"
+      ]
+    },
+    {
+      "type": "file",
+      "source": "centos.json",
+      "destination": "/root/centos.json",
+      "source": "httpdir/centos7-ks.cfg",
+      "destination": "/root/centos7-ks.cfg"
+    },
+    {
+      "type": "file",
+      "source": "id_rsa_cloud-user.pub",
+      "destination": "/home/nishiki/.ssh/authorized_keys"
+    },
+    {
+     "type": "shell",
+      "inline": [
+        "chmod 600 /home/nishiki/.ssh/authorized_keys",
+        "chown nishiki:nishiki /home/nishiki/.ssh/authorized_keys",
+	"echo package_upgrade: true >>/etc/cloud/cloud.cfg"
+      ]
+    }
+  ]
+ 
+ }
+
