@@ -32,7 +32,6 @@
         [ "-netdev", "user,id=net1" ],
         [ "-device", "virtio-net-pci,netdev=net1,mac=52:54:01:12:34:56" ]
       ],
-
       "boot_command":
       [
         "<tab>",
