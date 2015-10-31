@@ -6,33 +6,37 @@
       "iso_url": "http://ftp.riken.jp/Linux/centos/6.7/isos/x86_64/CentOS-6.7-x86_64-minimal.iso",
       "iso_checksum": "9381a24b8bee2fed0c26896141a64b69",
       "iso_checksum_type": "md5",
-      "output_directory": "output_centos_qcow2",
+      "output_directory": "output",
       "ssh_wait_timeout": "30s",
       "shutdown_command": "shutdown -P now",
-      "disk_size": 5000,
+      "disk_size": 15000,
       "format": "qcow2",
       "headless": true,
       "accelerator": "kvm",
-      "http_directory": "httpdir",
+      "http_directory": "http",
       "http_port_min": 10082,
       "http_port_max": 10089,
       "ssh_host_port_min": 2222,
-      "ssh_host_port_max": 2229,
+      "ssh_host_port_max": 2223,
       "ssh_username": "root",
-      "ssh_password": "MySecretPassword",
+      "ssh_password": "Password",
       "qemu_binary": "/usr/libexec/qemu-kvm",
       "ssh_port": 22,
       "ssh_wait_timeout": "900m",
       "vm_name": "test",
-      "net_device": "virtio-net",
-      "disk_interface": "virtio",
       "boot_wait": "5s",
-      "qemuargs": [ "-serial", "file:serial.out" ],
-      
+      "qemuargs": [
+        [ "-serial", "file:serial.out" ],
+        [ "-netdev", "user,id=net0,hostfwd=tcp::2222-:22,hostfwd=tcp::2223-:22,net=10.0.2.0/24" ],
+        [ "-device", "virtio-net,netdev=net0,mac=52:54:00:12:34:56" ],
+        [ "-netdev", "user,id=net1" ],
+        [ "-device", "virtio-net-pci,netdev=net1,mac=52:54:01:12:34:56" ]
+      ],
+
       "boot_command":
       [
         "<tab>",
-        " append console=ttyS0,115200n8 ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/centos6-ks.cfg",
+        "append console=ttyS0,115200n8 ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/centos6-ks.cfg ksdevice=eth0",
         "<enter>"
       ]
     }
@@ -47,7 +51,7 @@
         "yum -y install cloud-init cloud-utils-growpart dracut-modules-growroot",
         "echo \"NOZEROCONF=yes\" >> /etc/sysconfig/network",
         "adduser nishiki",
-        "echo 'nishiki:MySecretPassword' |chpasswd",
+        "echo 'nishiki:Password' |chpasswd",
         "mkdir /home/nishiki/.ssh",
         "chown nishiki:nishiki /home/nishiki/.ssh",
         "chmod 700 /home/nishiki/.ssh",
