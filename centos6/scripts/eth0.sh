@@ -1,5 +1,7 @@
 #!/bin/sh
 
+rm -f /etc/udev/rules.d/70-persistent-net.rules
+
 cat <<EOF > /etc/sysconfig/network-scripts/ifcfg-eth0
 HWADDR=52:54:00:12:34:56
 DEVICE="eth0"
