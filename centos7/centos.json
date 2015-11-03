@@ -46,12 +46,12 @@
         "yum -y update",
         "yum -y install cloud-init cloud-utils-growpart dracut-modules-growroot",
         "echo \"NOZEROCONF=yes\" >> /etc/sysconfig/network",
-        "adduser nishiki",
-        "echo 'nishiki:MySecretPassword' |chpasswd",
-        "mkdir /home/nishiki/.ssh",
-        "chown nishiki:nishiki /home/nishiki/.ssh",
-        "chmod 700 /home/nishiki/.ssh",
-        "echo \"nishiki ALL=(ALL) ALL\" >> /etc/sudoers",
+        "adduser nishitki",
+        "echo 'nishitki:MySecretPassword' |chpasswd",
+        "mkdir /home/nishitki/.ssh",
+        "chown nishitki:nishitki /home/nishitki/.ssh",
+        "chmod 700 /home/nishitki/.ssh",
+        "echo \"nishitki ALL=(ALL) ALL\" >> /etc/sudoers",
 	"yum clean all"
       ]
     },
@@ -70,8 +70,8 @@
     {
      "type": "shell",
       "inline": [
-        "chmod 600 /home/nishiki/.ssh/authorized_keys",
-        "chown nishiki:nishiki /home/nishiki/.ssh/authorized_keys",
+        "chmod 600 /home/nishitki/.ssh/authorized_keys",
+        "chown nishitki:nishitki /home/nishitki/.ssh/authorized_keys",
 	"echo package_upgrade: true >>/etc/cloud/cloud.cfg"
       ]
     }
