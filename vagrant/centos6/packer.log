@@ -1,0 +1,1211 @@
+2015/11/08 02:56:38 [INFO] Packer version: 0.7.5  9cd66feeacbd9cb318b72eb5ed59428c5b8c37ac+CHANGES
+2015/11/08 02:56:38 Packer Target OS/Arch: darwin amd64
+2015/11/08 02:56:38 Built with Go Version: go1.3.3
+2015/11/08 02:56:38 [DEBUG] Discoverd plugin: amazon-chroot = /usr/local/bin/packer-builder-amazon-chroot
+2015/11/08 02:56:38 [DEBUG] Discoverd plugin: amazon-ebs = /usr/local/bin/packer-builder-amazon-ebs
+2015/11/08 02:56:38 [DEBUG] Discoverd plugin: amazon-instance = /usr/local/bin/packer-builder-amazon-instance
+2015/11/08 02:56:38 [DEBUG] Discoverd plugin: digitalocean = /usr/local/bin/packer-builder-digitalocean
+2015/11/08 02:56:38 [DEBUG] Discoverd plugin: docker = /usr/local/bin/packer-builder-docker
+2015/11/08 02:56:38 [DEBUG] Discoverd plugin: googlecompute = /usr/local/bin/packer-builder-googlecompute
+2015/11/08 02:56:38 [DEBUG] Discoverd plugin: null = /usr/local/bin/packer-builder-null
+2015/11/08 02:56:38 [DEBUG] Discoverd plugin: openstack = /usr/local/bin/packer-builder-openstack
+2015/11/08 02:56:38 [DEBUG] Discoverd plugin: parallels-iso = /usr/local/bin/packer-builder-parallels-iso
+2015/11/08 02:56:38 [DEBUG] Discoverd plugin: parallels-pvm = /usr/local/bin/packer-builder-parallels-pvm
+2015/11/08 02:56:38 [DEBUG] Discoverd plugin: qemu = /usr/local/bin/packer-builder-qemu
+2015/11/08 02:56:38 [DEBUG] Discoverd plugin: virtualbox-iso = /usr/local/bin/packer-builder-virtualbox-iso
+2015/11/08 02:56:38 [DEBUG] Discoverd plugin: virtualbox-ovf = /usr/local/bin/packer-builder-virtualbox-ovf
+2015/11/08 02:56:38 [DEBUG] Discoverd plugin: vmware-iso = /usr/local/bin/packer-builder-vmware-iso
+2015/11/08 02:56:38 [DEBUG] Discoverd plugin: vmware-vmx = /usr/local/bin/packer-builder-vmware-vmx
+2015/11/08 02:56:38 [DEBUG] Discoverd plugin: atlas = /usr/local/bin/packer-post-processor-atlas
+2015/11/08 02:56:38 [DEBUG] Discoverd plugin: compress = /usr/local/bin/packer-post-processor-compress
+2015/11/08 02:56:38 [DEBUG] Discoverd plugin: docker-import = /usr/local/bin/packer-post-processor-docker-import
+2015/11/08 02:56:38 [DEBUG] Discoverd plugin: docker-push = /usr/local/bin/packer-post-processor-docker-push
+2015/11/08 02:56:38 [DEBUG] Discoverd plugin: docker-save = /usr/local/bin/packer-post-processor-docker-save
+2015/11/08 02:56:38 [DEBUG] Discoverd plugin: docker-tag = /usr/local/bin/packer-post-processor-docker-tag
+2015/11/08 02:56:38 [DEBUG] Discoverd plugin: vagrant = /usr/local/bin/packer-post-processor-vagrant
+2015/11/08 02:56:38 [DEBUG] Discoverd plugin: vagrant-cloud = /usr/local/bin/packer-post-processor-vagrant-cloud
+2015/11/08 02:56:38 [DEBUG] Discoverd plugin: vsphere = /usr/local/bin/packer-post-processor-vsphere
+2015/11/08 02:56:38 [DEBUG] Discoverd plugin: ansible-local = /usr/local/bin/packer-provisioner-ansible-local
+2015/11/08 02:56:38 [DEBUG] Discoverd plugin: chef-client = /usr/local/bin/packer-provisioner-chef-client
+2015/11/08 02:56:38 [DEBUG] Discoverd plugin: chef-solo = /usr/local/bin/packer-provisioner-chef-solo
+2015/11/08 02:56:38 [DEBUG] Discoverd plugin: file = /usr/local/bin/packer-provisioner-file
+2015/11/08 02:56:38 [DEBUG] Discoverd plugin: puppet-masterless = /usr/local/bin/packer-provisioner-puppet-masterless
+2015/11/08 02:56:38 [DEBUG] Discoverd plugin: puppet-server = /usr/local/bin/packer-provisioner-puppet-server
+2015/11/08 02:56:38 [DEBUG] Discoverd plugin: salt-masterless = /usr/local/bin/packer-provisioner-salt-masterless
+2015/11/08 02:56:38 [DEBUG] Discoverd plugin: shell = /usr/local/bin/packer-provisioner-shell
+2015/11/08 02:56:38 Detected home directory from env var: /Users/nishiki
+2015/11/08 02:56:38 Detected home directory from env var: /Users/nishiki
+2015/11/08 02:56:38 Attempting to open config file: /Users/nishiki/.packerconfig
+2015/11/08 02:56:38 File doesn't exist, but doesn't need to. Ignoring.
+2015/11/08 02:56:38 Packer config: &{DisableCheckpoint:false DisableCheckpointSignature:false PluginMinPort:10000 PluginMaxPort:25000 Builders:map[openstack:/usr/local/bin/packer-builder-openstack parallels-pvm:/usr/local/bin/packer-builder-parallels-pvm virtualbox-ovf:/usr/local/bin/packer-builder-virtualbox-ovf vmware-iso:/usr/local/bin/packer-builder-vmware-iso vmware-vmx:/usr/local/bin/packer-builder-vmware-vmx digitalocean:/usr/local/bin/packer-builder-digitalocean docker:/usr/local/bin/packer-builder-docker null:/usr/local/bin/packer-builder-null parallels-iso:/usr/local/bin/packer-builder-parallels-iso virtualbox-iso:/usr/local/bin/packer-builder-virtualbox-iso amazon-chroot:/usr/local/bin/packer-builder-amazon-chroot amazon-instance:/usr/local/bin/packer-builder-amazon-instance googlecompute:/usr/local/bin/packer-builder-googlecompute amazon-ebs:/usr/local/bin/packer-builder-amazon-ebs qemu:/usr/local/bin/packer-builder-qemu] PostProcessors:map[compress:/usr/local/bin/packer-post-processor-compress docker-save:/usr/local/bin/packer-post-processor-docker-save vagrant-cloud:/usr/local/bin/packer-post-processor-vagrant-cloud atlas:/usr/local/bin/packer-post-processor-atlas docker-push:/usr/local/bin/packer-post-processor-docker-push docker-tag:/usr/local/bin/packer-post-processor-docker-tag vagrant:/usr/local/bin/packer-post-processor-vagrant vsphere:/usr/local/bin/packer-post-processor-vsphere docker-import:/usr/local/bin/packer-post-processor-docker-import] Provisioners:map[chef-solo:/usr/local/bin/packer-provisioner-chef-solo file:/usr/local/bin/packer-provisioner-file puppet-masterless:/usr/local/bin/packer-provisioner-puppet-masterless puppet-server:/usr/local/bin/packer-provisioner-puppet-server salt-masterless:/usr/local/bin/packer-provisioner-salt-masterless shell:/usr/local/bin/packer-provisioner-shell ansible-local:/usr/local/bin/packer-provisioner-ansible-local chef-client:/usr/local/bin/packer-provisioner-chef-client]}
+2015/11/08 02:56:38 Setting cache directory: /Users/nishiki/src/github.com/nishitki/packer/vagrant/centos6/packer_cache
+2015/11/08 02:56:38 Detected home directory from env var: /Users/nishiki
+2015/11/08 02:56:38 Reading template: virtualbox.json
+2015/11/08 02:56:38 Creating build: virtualbox-iso
+2015/11/08 02:56:38 Loading builder: virtualbox-iso
+2015/11/08 02:56:38 Creating plugin client for path: /usr/local/bin/packer-builder-virtualbox-iso
+2015/11/08 02:56:38 Starting plugin: /usr/local/bin/packer-builder-virtualbox-iso []string{"/usr/local/bin/packer-builder-virtualbox-iso"}
+2015/11/08 02:56:38 Waiting for RPC address for: /usr/local/bin/packer-builder-virtualbox-iso
+2015/11/08 02:56:38 packer-builder-virtualbox-iso: 2015/11/08 02:56:38 Plugin minimum port: 10000
+2015/11/08 02:56:38 packer-builder-virtualbox-iso: 2015/11/08 02:56:38 Plugin maximum port: 25000
+2015/11/08 02:56:38 packer-builder-virtualbox-iso: 2015/11/08 02:56:38 Plugin address: unix /var/folders/k4/62jf9fld7y9_mpwtc4y508h80000gn/T/packer-plugin470938270
+2015/11/08 02:56:38 packer-builder-virtualbox-iso: 2015/11/08 02:56:38 Waiting for connection...
+2015/11/08 02:56:38 packer-builder-virtualbox-iso: 2015/11/08 02:56:38 Serving a plugin connection...
+2015/11/08 02:56:38 Loading post-processor: vagrant
+2015/11/08 02:56:38 Creating plugin client for path: /usr/local/bin/packer-post-processor-vagrant
+2015/11/08 02:56:38 Starting plugin: /usr/local/bin/packer-post-processor-vagrant []string{"/usr/local/bin/packer-post-processor-vagrant"}
+2015/11/08 02:56:38 Waiting for RPC address for: /usr/local/bin/packer-post-processor-vagrant
+2015/11/08 02:56:38 packer-post-processor-vagrant: 2015/11/08 02:56:38 Plugin minimum port: 10000
+2015/11/08 02:56:38 packer-post-processor-vagrant: 2015/11/08 02:56:38 Plugin maximum port: 25000
+2015/11/08 02:56:38 packer-post-processor-vagrant: 2015/11/08 02:56:38 Plugin address: unix /var/folders/k4/62jf9fld7y9_mpwtc4y508h80000gn/T/packer-plugin085461112
+2015/11/08 02:56:38 packer-post-processor-vagrant: 2015/11/08 02:56:38 Waiting for connection...
+2015/11/08 02:56:38 packer-post-processor-vagrant: 2015/11/08 02:56:38 Serving a plugin connection...
+2015/11/08 02:56:38 ui: [1;32mvirtualbox-iso output will be in this color.[0m
+2015/11/08 02:56:38 ui: 
+2015/11/08 02:56:38 Build debug mode: false
+2015/11/08 02:56:38 Force build: false
+2015/11/08 02:56:38 Preparing build: virtualbox-iso
+2015/11/08 02:56:38 Waiting on builds to complete...
+2015/11/08 02:56:38 Starting build run: virtualbox-iso
+2015/11/08 02:56:38 Running builder: virtualbox-iso
+2015/11/08 02:56:38 packer-builder-virtualbox-iso: 2015/11/08 02:56:38 VBoxManage path: /usr/local/bin/VBoxManage
+2015/11/08 02:56:38 packer-builder-virtualbox-iso: 2015/11/08 02:56:38 VBoxManage --version output: 5.0.8r103449
+2015/11/08 02:56:38 packer-builder-virtualbox-iso: 2015/11/08 02:56:38 VirtualBox version: 5.0.8
+2015/11/08 02:56:38 packer-builder-virtualbox-iso: 2015/11/08 02:56:38 Found Default Guest Additions ISO: /Applications/VirtualBox.app/Contents/MacOS/VBoxGuestAdditions.iso
+2015/11/08 02:56:38 packer-builder-virtualbox-iso: 2015/11/08 02:56:38 Guest additions URL: file:///Applications/VirtualBox.app/Contents/MacOS/VBoxGuestAdditions.iso
+2015/11/08 02:56:38 ui: [1;32m==> virtualbox-iso: Downloading or copying Guest additions[0m
+2015/11/08 02:56:38 ui: [0;32m    virtualbox-iso: Downloading or copying: file:///Applications/VirtualBox.app/Contents/MacOS/VBoxGuestAdditions.iso[0m
+2015/11/08 02:56:38 packer-builder-virtualbox-iso: 2015/11/08 02:56:38 Acquiring lock to download: file:///Applications/VirtualBox.app/Contents/MacOS/VBoxGuestAdditions.iso
+2015/11/08 02:56:38 packer-builder-virtualbox-iso: 2015/11/08 02:56:38 Parsed URL: &url.URL{Scheme:"file", Opaque:"", User:(*url.Userinfo)(nil), Host:"", Path:"/Applications/VirtualBox.app/Contents/MacOS/VBoxGuestAdditions.iso", RawQuery:"", Fragment:""}
+2015/11/08 02:56:38 ui: [1;32m==> virtualbox-iso: Downloading or copying ISO[0m
+2015/11/08 02:56:38 ui: [0;32m    virtualbox-iso: Downloading or copying: http://ftp.riken.jp/Linux/centos/6.7/isos/x86_64/CentOS-6.7-x86_64-minimal.iso[0m
+2015/11/08 02:56:38 packer-builder-virtualbox-iso: 2015/11/08 02:56:38 Acquiring lock to download: http://ftp.riken.jp/Linux/centos/6.7/isos/x86_64/CentOS-6.7-x86_64-minimal.iso
+2015/11/08 02:56:38 packer-builder-virtualbox-iso: 2015/11/08 02:56:38 Verifying checksum of /Users/nishiki/src/github.com/nishitki/packer/vagrant/centos6/packer_cache/6d3b95f4795a416dc172de40bd12a60160638e39dfca830f3878f9d2a8b1425d.iso
+2015/11/08 02:56:38 packer-builder-virtualbox-iso: 2015/11/08 02:56:38 Initial checksum matched, no download needed.
+2015/11/08 02:56:38 packer-builder-virtualbox-iso: 2015/11/08 02:56:38 No floppy files specified. Floppy disk will not be made.
+2015/11/08 02:56:38 packer-builder-virtualbox-iso: 2015/11/08 02:56:38 Trying port: 10082
+2015/11/08 02:56:38 ui: [1;32m==> virtualbox-iso: Starting HTTP server on port 10082[0m
+2015/11/08 02:56:38 packer-builder-virtualbox-iso: 2015/11/08 02:56:38 Suppressing annoying messages in VirtualBox
+2015/11/08 02:56:38 packer-builder-virtualbox-iso: 2015/11/08 02:56:38 Executing VBoxManage: []string{"setextradata", "global", "GUI/RegistrationData", "triesLeft=0"}
+2015/11/08 02:56:38 packer-builder-virtualbox-iso: 2015/11/08 02:56:38 stdout:
+2015/11/08 02:56:38 packer-builder-virtualbox-iso: 2015/11/08 02:56:38 stderr:
+2015/11/08 02:56:38 packer-builder-virtualbox-iso: 2015/11/08 02:56:38 Executing VBoxManage: []string{"setextradata", "global", "GUI/SuppressMessages", "confirmInputCapture,remindAboutAutoCapture,remindAboutMouseIntegrationOff,remindAboutMouseIntegrationOn,remindAboutWrongColorDepth"}
+2015/11/08 02:56:38 packer-builder-virtualbox-iso: 2015/11/08 02:56:38 stdout:
+2015/11/08 02:56:38 packer-builder-virtualbox-iso: 2015/11/08 02:56:38 stderr:
+2015/11/08 02:56:38 packer-builder-virtualbox-iso: 2015/11/08 02:56:38 Executing VBoxManage: []string{"setextradata", "global", "GUI/UpdateCheckCount", "60"}
+2015/11/08 02:56:38 packer-builder-virtualbox-iso: 2015/11/08 02:56:38 stdout:
+2015/11/08 02:56:38 packer-builder-virtualbox-iso: 2015/11/08 02:56:38 stderr:
+2015/11/08 02:56:38 packer-builder-virtualbox-iso: 2015/11/08 02:56:38 Executing VBoxManage: []string{"setextradata", "global", "GUI/UpdateDate", "1 d, 2016-01-01, stable"}
+2015/11/08 02:56:38 packer-builder-virtualbox-iso: 2015/11/08 02:56:38 stdout:
+2015/11/08 02:56:38 packer-builder-virtualbox-iso: 2015/11/08 02:56:38 stderr:
+2015/11/08 02:56:38 ui: [1;32m==> virtualbox-iso: Creating virtual machine...[0m
+2015/11/08 02:56:38 packer-builder-virtualbox-iso: 2015/11/08 02:56:38 Executing VBoxManage: []string{"createvm", "--name", "centos6", "--ostype", "RedHat_64", "--register"}
+2015/11/08 02:56:39 packer-builder-virtualbox-iso: 2015/11/08 02:56:39 stdout: Virtual machine 'centos6' is created and registered.
+2015/11/08 02:56:39 packer-builder-virtualbox-iso: UUID: 04a71a19-69a2-4f87-9496-825ccbf6e425
+2015/11/08 02:56:39 packer-builder-virtualbox-iso: Settings file: '/Users/nishiki/VirtualBox VMs/centos6/centos6.vbox'
+2015/11/08 02:56:39 packer-builder-virtualbox-iso: 2015/11/08 02:56:39 stderr:
+2015/11/08 02:56:39 packer-builder-virtualbox-iso: 2015/11/08 02:56:39 Executing VBoxManage: []string{"modifyvm", "centos6", "--boot1", "disk", "--boot2", "dvd", "--boot3", "none", "--boot4", "none"}
+2015/11/08 02:56:39 packer-builder-virtualbox-iso: 2015/11/08 02:56:39 stdout:
+2015/11/08 02:56:39 packer-builder-virtualbox-iso: 2015/11/08 02:56:39 stderr:
+2015/11/08 02:56:39 packer-builder-virtualbox-iso: 2015/11/08 02:56:39 Executing VBoxManage: []string{"modifyvm", "centos6", "--cpus", "1"}
+2015/11/08 02:56:39 packer-builder-virtualbox-iso: 2015/11/08 02:56:39 stdout:
+2015/11/08 02:56:39 packer-builder-virtualbox-iso: 2015/11/08 02:56:39 stderr:
+2015/11/08 02:56:39 packer-builder-virtualbox-iso: 2015/11/08 02:56:39 Executing VBoxManage: []string{"modifyvm", "centos6", "--memory", "512"}
+2015/11/08 02:56:39 packer-builder-virtualbox-iso: 2015/11/08 02:56:39 stdout:
+2015/11/08 02:56:39 packer-builder-virtualbox-iso: 2015/11/08 02:56:39 stderr:
+2015/11/08 02:56:39 ui: [1;32m==> virtualbox-iso: Creating hard drive...[0m
+2015/11/08 02:56:39 packer-builder-virtualbox-iso: 2015/11/08 02:56:39 Executing VBoxManage: []string{"createhd", "--filename", "output-virtualbox-iso/centos6.vdi", "--size", "10240", "--format", "VDI", "--variant", "Standard"}
+2015/11/08 02:56:39 packer-builder-virtualbox-iso: 2015/11/08 02:56:39 stdout: Medium created. UUID: d4d0de0c-4934-4822-b50c-1a4454ec037f
+2015/11/08 02:56:39 packer-builder-virtualbox-iso: 2015/11/08 02:56:39 stderr: 0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100%
+2015/11/08 02:56:39 packer-builder-virtualbox-iso: 2015/11/08 02:56:39 Executing VBoxManage: []string{"storagectl", "centos6", "--name", "IDE Controller", "--add", "ide"}
+2015/11/08 02:56:39 packer-builder-virtualbox-iso: 2015/11/08 02:56:39 stdout:
+2015/11/08 02:56:39 packer-builder-virtualbox-iso: 2015/11/08 02:56:39 stderr:
+2015/11/08 02:56:39 packer-builder-virtualbox-iso: 2015/11/08 02:56:39 Executing VBoxManage: []string{"storageattach", "centos6", "--storagectl", "IDE Controller", "--port", "0", "--device", "0", "--type", "hdd", "--medium", "output-virtualbox-iso/centos6.vdi"}
+2015/11/08 02:56:39 packer-builder-virtualbox-iso: 2015/11/08 02:56:39 stdout:
+2015/11/08 02:56:39 packer-builder-virtualbox-iso: 2015/11/08 02:56:39 stderr:
+2015/11/08 02:56:39 packer-builder-virtualbox-iso: 2015/11/08 02:56:39 Executing VBoxManage: []string{"storageattach", "centos6", "--storagectl", "IDE Controller", "--port", "0", "--device", "1", "--type", "dvddrive", "--medium", "/Users/nishiki/src/github.com/nishitki/packer/vagrant/centos6/packer_cache/6d3b95f4795a416dc172de40bd12a60160638e39dfca830f3878f9d2a8b1425d.iso"}
+2015/11/08 02:56:39 packer-builder-virtualbox-iso: 2015/11/08 02:56:39 stdout:
+2015/11/08 02:56:39 packer-builder-virtualbox-iso: 2015/11/08 02:56:39 stderr:
+2015/11/08 02:56:39 packer-builder-virtualbox-iso: 2015/11/08 02:56:39 Not attaching guest additions since we're uploading.
+2015/11/08 02:56:39 packer-builder-virtualbox-iso: 2015/11/08 02:56:39 No floppy disk, not attaching.
+2015/11/08 02:56:39 packer-builder-virtualbox-iso: 2015/11/08 02:56:39 Looking for available SSH port between 2222 and 4444
+2015/11/08 02:56:39 packer-builder-virtualbox-iso: 2015/11/08 02:56:39 Trying port: 3957
+2015/11/08 02:56:39 ui: [1;32m==> virtualbox-iso: Creating forwarded port mapping for SSH (host port 3957)[0m
+2015/11/08 02:56:39 packer-builder-virtualbox-iso: 2015/11/08 02:56:39 Executing VBoxManage: []string{"modifyvm", "centos6", "--natpf1", "packerssh,tcp,127.0.0.1,3957,,22"}
+2015/11/08 02:56:39 packer-builder-virtualbox-iso: 2015/11/08 02:56:39 stdout:
+2015/11/08 02:56:39 packer-builder-virtualbox-iso: 2015/11/08 02:56:39 stderr:
+2015/11/08 02:56:39 ui: [1;32m==> virtualbox-iso: Executing custom VBoxManage commands...[0m
+2015/11/08 02:56:39 ui: [0;32m    virtualbox-iso: Executing: modifyvm centos6 --memory 512[0m
+2015/11/08 02:56:39 packer-builder-virtualbox-iso: 2015/11/08 02:56:39 Executing VBoxManage: []string{"modifyvm", "centos6", "--memory", "512"}
+2015/11/08 02:56:39 packer-builder-virtualbox-iso: 2015/11/08 02:56:39 stdout:
+2015/11/08 02:56:39 packer-builder-virtualbox-iso: 2015/11/08 02:56:39 stderr:
+2015/11/08 02:56:39 ui: [0;32m    virtualbox-iso: Executing: modifyvm centos6 --cpus 1[0m
+2015/11/08 02:56:39 packer-builder-virtualbox-iso: 2015/11/08 02:56:39 Executing VBoxManage: []string{"modifyvm", "centos6", "--cpus", "1"}
+2015/11/08 02:56:39 packer-builder-virtualbox-iso: 2015/11/08 02:56:39 stdout:
+2015/11/08 02:56:39 packer-builder-virtualbox-iso: 2015/11/08 02:56:39 stderr:
+2015/11/08 02:56:39 ui: [1;32m==> virtualbox-iso: Starting the virtual machine...[0m
+2015/11/08 02:56:39 packer-builder-virtualbox-iso: 2015/11/08 02:56:39 Executing VBoxManage: []string{"startvm", "centos6", "--type", "gui"}
+2015/11/08 02:56:41 packer-builder-virtualbox-iso: 2015/11/08 02:56:41 stdout: Waiting for VM "centos6" to power on...
+2015/11/08 02:56:41 packer-builder-virtualbox-iso: VM "centos6" has been successfully started.
+2015/11/08 02:56:41 packer-builder-virtualbox-iso: 2015/11/08 02:56:41 stderr:
+2015/11/08 02:56:41 ui: [1;32m==> virtualbox-iso: Waiting 10s for boot...[0m
+2015/11/08 02:56:51 ui: [1;32m==> virtualbox-iso: Typing the boot command...[0m
+2015/11/08 02:56:51 packer-builder-virtualbox-iso: 2015/11/08 02:56:51 Special code '<esc>' found, replacing with: [01 81]
+2015/11/08 02:56:51 packer-builder-virtualbox-iso: 2015/11/08 02:56:51 Special code <wait> found, will sleep 1 second at this point.
+2015/11/08 02:56:51 packer-builder-virtualbox-iso: 2015/11/08 02:56:51 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "01"}
+2015/11/08 02:56:51 packer-builder-virtualbox-iso: 2015/11/08 02:56:51 stdout:
+2015/11/08 02:56:51 packer-builder-virtualbox-iso: 2015/11/08 02:56:51 stderr:
+2015/11/08 02:56:51 packer-builder-virtualbox-iso: 2015/11/08 02:56:51 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "81"}
+2015/11/08 02:56:51 packer-builder-virtualbox-iso: 2015/11/08 02:56:51 stdout:
+2015/11/08 02:56:51 packer-builder-virtualbox-iso: 2015/11/08 02:56:51 stderr:
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Sending char 'l', code '[26 a6]', shift false
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Sending char 'i', code '[17 97]', shift false
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Sending char 'n', code '[31 b1]', shift false
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Sending char 'u', code '[16 96]', shift false
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Sending char 'x', code '[2d ad]', shift false
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Sending char ' ', code '[39 b9]', shift false
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Sending char 't', code '[14 94]', shift false
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Sending char 'e', code '[12 92]', shift false
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Sending char 'x', code '[2d ad]', shift false
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Sending char 't', code '[14 94]', shift false
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Sending char ' ', code '[39 b9]', shift false
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Sending char 'k', code '[25 a5]', shift false
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Sending char 's', code '[1f 9f]', shift false
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Sending char '=', code '[0d 8d]', shift false
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Sending char 'h', code '[23 a3]', shift false
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Sending char 't', code '[14 94]', shift false
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Sending char 't', code '[14 94]', shift false
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Sending char 'p', code '[19 99]', shift false
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Sending char ':', code '[2a 27 aa a7]', shift true
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Sending char '/', code '[35 b5]', shift false
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Sending char '/', code '[35 b5]', shift false
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Sending char '1', code '[02 82]', shift false
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Sending char '0', code '[0b 8b]', shift false
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Sending char '.', code '[34 b4]', shift false
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Sending char '0', code '[0b 8b]', shift false
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Sending char '.', code '[34 b4]', shift false
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Sending char '2', code '[03 83]', shift false
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Sending char '.', code '[34 b4]', shift false
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Sending char '2', code '[03 83]', shift false
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Sending char ':', code '[2a 27 aa a7]', shift true
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Sending char '1', code '[02 82]', shift false
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Sending char '0', code '[0b 8b]', shift false
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Sending char '0', code '[0b 8b]', shift false
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Sending char '8', code '[09 89]', shift false
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Sending char '2', code '[03 83]', shift false
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Sending char '/', code '[35 b5]', shift false
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Sending char 'c', code '[2e ae]', shift false
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Sending char 'e', code '[12 92]', shift false
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Sending char 'n', code '[31 b1]', shift false
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Sending char 't', code '[14 94]', shift false
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Sending char 'o', code '[18 98]', shift false
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Sending char 's', code '[1f 9f]', shift false
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Sending char '6', code '[07 87]', shift false
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Sending char '-', code '[0c 8c]', shift false
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Sending char 'k', code '[25 a5]', shift false
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Sending char 's', code '[1f 9f]', shift false
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Sending char '.', code '[34 b4]', shift false
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Sending char 'c', code '[2e ae]', shift false
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Sending char 'f', code '[21 a1]', shift false
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Sending char 'g', code '[22 a2]', shift false
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "26"}
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 stdout:
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 stderr:
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "a6"}
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 stdout:
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 stderr:
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "17"}
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 stdout:
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 stderr:
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "97"}
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 stdout:
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 stderr:
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "31"}
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 stdout:
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 stderr:
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "b1"}
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 stdout:
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 stderr:
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "16"}
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 stdout:
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 stderr:
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "96"}
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 stdout:
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 stderr:
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "2d"}
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 stdout:
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 stderr:
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "ad"}
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 stdout:
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 stderr:
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "39"}
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 stdout:
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 stderr:
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "b9"}
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 stdout:
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 stderr:
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "14"}
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 stdout:
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 stderr:
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "94"}
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 stdout:
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 stderr:
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "12"}
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 stdout:
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 stderr:
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "92"}
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 stdout:
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 stderr:
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "2d"}
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 stdout:
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 stderr:
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "ad"}
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 stdout:
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 stderr:
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "14"}
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 stdout:
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 stderr:
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "94"}
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 stdout:
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 stderr:
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "39"}
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 stdout:
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 stderr:
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "b9"}
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 stdout:
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 stderr:
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "25"}
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 stdout:
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 stderr:
+2015/11/08 02:56:52 packer-builder-virtualbox-iso: 2015/11/08 02:56:52 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "a5"}
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 stdout:
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 stderr:
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "1f"}
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 stdout:
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 stderr:
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "9f"}
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 stdout:
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 stderr:
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "0d"}
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 stdout:
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 stderr:
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "8d"}
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 stdout:
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 stderr:
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "23"}
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 stdout:
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 stderr:
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "a3"}
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 stdout:
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 stderr:
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "14"}
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 stdout:
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 stderr:
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "94"}
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 stdout:
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 stderr:
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "14"}
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 stdout:
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 stderr:
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "94"}
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 stdout:
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 stderr:
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "19"}
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 stdout:
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 stderr:
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "99"}
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 stdout:
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 stderr:
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "2a"}
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 stdout:
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 stderr:
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "27"}
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 stdout:
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 stderr:
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "aa"}
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 stdout:
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 stderr:
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "a7"}
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 stdout:
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 stderr:
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "35"}
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 stdout:
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 stderr:
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "b5"}
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 stdout:
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 stderr:
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "35"}
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 stdout:
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 stderr:
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "b5"}
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 stdout:
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 stderr:
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "02"}
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 stdout:
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 stderr:
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "82"}
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 stdout:
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 stderr:
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "0b"}
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 stdout:
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 stderr:
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "8b"}
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 stdout:
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 stderr:
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "34"}
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 stdout:
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 stderr:
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "b4"}
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 stdout:
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 stderr:
+2015/11/08 02:56:53 packer-builder-virtualbox-iso: 2015/11/08 02:56:53 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "0b"}
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 stdout:
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 stderr:
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "8b"}
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 stdout:
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 stderr:
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "34"}
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 stdout:
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 stderr:
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "b4"}
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 stdout:
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 stderr:
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "03"}
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 stdout:
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 stderr:
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "83"}
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 stdout:
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 stderr:
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "34"}
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 stdout:
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 stderr:
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "b4"}
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 stdout:
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 stderr:
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "03"}
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 stdout:
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 stderr:
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "83"}
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 stdout:
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 stderr:
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "2a"}
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 stdout:
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 stderr:
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "27"}
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 stdout:
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 stderr:
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "aa"}
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 stdout:
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 stderr:
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "a7"}
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 stdout:
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 stderr:
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "02"}
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 stdout:
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 stderr:
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "82"}
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 stdout:
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 stderr:
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "0b"}
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 stdout:
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 stderr:
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "8b"}
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 stdout:
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 stderr:
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "0b"}
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 stdout:
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 stderr:
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "8b"}
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 stdout:
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 stderr:
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "09"}
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 stdout:
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 stderr:
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "89"}
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 stdout:
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 stderr:
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "03"}
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 stdout:
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 stderr:
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "83"}
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 stdout:
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 stderr:
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "35"}
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 stdout:
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 stderr:
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "b5"}
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 stdout:
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 stderr:
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "2e"}
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 stdout:
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 stderr:
+2015/11/08 02:56:54 packer-builder-virtualbox-iso: 2015/11/08 02:56:54 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "ae"}
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 stdout:
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 stderr:
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "12"}
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 stdout:
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 stderr:
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "92"}
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 stdout:
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 stderr:
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "31"}
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 stdout:
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 stderr:
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "b1"}
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 stdout:
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 stderr:
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "14"}
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 stdout:
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 stderr:
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "94"}
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 stdout:
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 stderr:
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "18"}
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 stdout:
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 stderr:
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "98"}
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 stdout:
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 stderr:
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "1f"}
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 stdout:
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 stderr:
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "9f"}
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 stdout:
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 stderr:
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "07"}
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 stdout:
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 stderr:
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "87"}
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 stdout:
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 stderr:
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "0c"}
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 stdout:
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 stderr:
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "8c"}
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 stdout:
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 stderr:
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "25"}
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 stdout:
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 stderr:
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "a5"}
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 stdout:
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 stderr:
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "1f"}
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 stdout:
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 stderr:
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "9f"}
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 stdout:
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 stderr:
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "34"}
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 stdout:
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 stderr:
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "b4"}
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 stdout:
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 stderr:
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "2e"}
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 stdout:
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 stderr:
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "ae"}
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 stdout:
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 stderr:
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "21"}
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 stdout:
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 stderr:
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "a1"}
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 stdout:
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 stderr:
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "22"}
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 stdout:
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 stderr:
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "a2"}
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 stdout:
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 stderr:
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 Special code '<enter>' found, replacing with: [1c 9c]
+2015/11/08 02:56:55 packer-builder-virtualbox-iso: 2015/11/08 02:56:55 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "1c"}
+2015/11/08 02:56:56 packer-builder-virtualbox-iso: 2015/11/08 02:56:56 stdout:
+2015/11/08 02:56:56 packer-builder-virtualbox-iso: 2015/11/08 02:56:56 stderr:
+2015/11/08 02:56:56 packer-builder-virtualbox-iso: 2015/11/08 02:56:56 Executing VBoxManage: []string{"controlvm", "centos6", "keyboardputscancode", "9c"}
+2015/11/08 02:56:56 packer-builder-virtualbox-iso: 2015/11/08 02:56:56 stdout:
+2015/11/08 02:56:56 packer-builder-virtualbox-iso: 2015/11/08 02:56:56 stderr:
+2015/11/08 02:56:56 packer-builder-virtualbox-iso: 2015/11/08 02:56:56 Waiting for SSH, up to timeout: 2h46m40s
+2015/11/08 02:56:56 ui: [1;32m==> virtualbox-iso: Waiting for SSH to become available...[0m
+2015/11/08 02:56:56 packer-builder-virtualbox-iso: 2015/11/08 02:56:56 Attempting SSH connection...
+2015/11/08 02:56:56 packer-builder-virtualbox-iso: 2015/11/08 02:56:56 reconnecting to TCP connection for SSH
+2015/11/08 02:56:56 packer-builder-virtualbox-iso: 2015/11/08 02:56:56 handshaking with SSH
+2015/11/08 02:57:26 packer-builder-virtualbox-iso: 2015/11/08 02:57:26 handshake error: ssh: handshake failed: EOF
+2015/11/08 02:57:26 packer-builder-virtualbox-iso: 2015/11/08 02:57:26 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 02:57:31 packer-builder-virtualbox-iso: 2015/11/08 02:57:31 Attempting SSH connection...
+2015/11/08 02:57:31 packer-builder-virtualbox-iso: 2015/11/08 02:57:31 reconnecting to TCP connection for SSH
+2015/11/08 02:57:31 packer-builder-virtualbox-iso: 2015/11/08 02:57:31 handshaking with SSH
+2015/11/08 02:57:31 packer-builder-virtualbox-iso: 2015/11/08 02:57:31 handshake error: ssh: handshake failed: EOF
+2015/11/08 02:57:31 packer-builder-virtualbox-iso: 2015/11/08 02:57:31 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 02:57:36 packer-builder-virtualbox-iso: 2015/11/08 02:57:36 Attempting SSH connection...
+2015/11/08 02:57:36 packer-builder-virtualbox-iso: 2015/11/08 02:57:36 reconnecting to TCP connection for SSH
+2015/11/08 02:57:36 packer-builder-virtualbox-iso: 2015/11/08 02:57:36 handshaking with SSH
+2015/11/08 02:57:36 packer-builder-virtualbox-iso: 2015/11/08 02:57:36 handshake error: ssh: handshake failed: EOF
+2015/11/08 02:57:36 packer-builder-virtualbox-iso: 2015/11/08 02:57:36 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 02:57:41 packer-builder-virtualbox-iso: 2015/11/08 02:57:41 Attempting SSH connection...
+2015/11/08 02:57:41 packer-builder-virtualbox-iso: 2015/11/08 02:57:41 reconnecting to TCP connection for SSH
+2015/11/08 02:57:41 packer-builder-virtualbox-iso: 2015/11/08 02:57:41 handshaking with SSH
+2015/11/08 02:57:41 packer-builder-virtualbox-iso: 2015/11/08 02:57:41 handshake error: ssh: handshake failed: EOF
+2015/11/08 02:57:41 packer-builder-virtualbox-iso: 2015/11/08 02:57:41 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 02:57:46 packer-builder-virtualbox-iso: 2015/11/08 02:57:46 Attempting SSH connection...
+2015/11/08 02:57:46 packer-builder-virtualbox-iso: 2015/11/08 02:57:46 reconnecting to TCP connection for SSH
+2015/11/08 02:57:46 packer-builder-virtualbox-iso: 2015/11/08 02:57:46 handshaking with SSH
+2015/11/08 02:57:46 packer-builder-virtualbox-iso: 2015/11/08 02:57:46 handshake error: ssh: handshake failed: EOF
+2015/11/08 02:57:46 packer-builder-virtualbox-iso: 2015/11/08 02:57:46 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 02:57:51 packer-builder-virtualbox-iso: 2015/11/08 02:57:51 Attempting SSH connection...
+2015/11/08 02:57:51 packer-builder-virtualbox-iso: 2015/11/08 02:57:51 reconnecting to TCP connection for SSH
+2015/11/08 02:57:51 packer-builder-virtualbox-iso: 2015/11/08 02:57:51 handshaking with SSH
+2015/11/08 02:57:51 packer-builder-virtualbox-iso: 2015/11/08 02:57:51 handshake error: ssh: handshake failed: EOF
+2015/11/08 02:57:51 packer-builder-virtualbox-iso: 2015/11/08 02:57:51 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 02:57:56 packer-builder-virtualbox-iso: 2015/11/08 02:57:56 Attempting SSH connection...
+2015/11/08 02:57:56 packer-builder-virtualbox-iso: 2015/11/08 02:57:56 reconnecting to TCP connection for SSH
+2015/11/08 02:57:56 packer-builder-virtualbox-iso: 2015/11/08 02:57:56 handshaking with SSH
+2015/11/08 02:57:56 packer-builder-virtualbox-iso: 2015/11/08 02:57:56 handshake error: ssh: handshake failed: EOF
+2015/11/08 02:57:56 packer-builder-virtualbox-iso: 2015/11/08 02:57:56 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 02:58:01 packer-builder-virtualbox-iso: 2015/11/08 02:58:01 Attempting SSH connection...
+2015/11/08 02:58:01 packer-builder-virtualbox-iso: 2015/11/08 02:58:01 reconnecting to TCP connection for SSH
+2015/11/08 02:58:01 packer-builder-virtualbox-iso: 2015/11/08 02:58:01 handshaking with SSH
+2015/11/08 02:58:01 packer-builder-virtualbox-iso: 2015/11/08 02:58:01 handshake error: ssh: handshake failed: EOF
+2015/11/08 02:58:01 packer-builder-virtualbox-iso: 2015/11/08 02:58:01 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 02:58:06 packer-builder-virtualbox-iso: 2015/11/08 02:58:06 Attempting SSH connection...
+2015/11/08 02:58:06 packer-builder-virtualbox-iso: 2015/11/08 02:58:06 reconnecting to TCP connection for SSH
+2015/11/08 02:58:06 packer-builder-virtualbox-iso: 2015/11/08 02:58:06 handshaking with SSH
+2015/11/08 02:58:06 packer-builder-virtualbox-iso: 2015/11/08 02:58:06 handshake error: ssh: handshake failed: EOF
+2015/11/08 02:58:06 packer-builder-virtualbox-iso: 2015/11/08 02:58:06 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 02:58:11 packer-builder-virtualbox-iso: 2015/11/08 02:58:11 Attempting SSH connection...
+2015/11/08 02:58:11 packer-builder-virtualbox-iso: 2015/11/08 02:58:11 reconnecting to TCP connection for SSH
+2015/11/08 02:58:11 packer-builder-virtualbox-iso: 2015/11/08 02:58:11 handshaking with SSH
+2015/11/08 02:58:11 packer-builder-virtualbox-iso: 2015/11/08 02:58:11 handshake error: ssh: handshake failed: EOF
+2015/11/08 02:58:11 packer-builder-virtualbox-iso: 2015/11/08 02:58:11 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 02:58:16 packer-builder-virtualbox-iso: 2015/11/08 02:58:16 Attempting SSH connection...
+2015/11/08 02:58:16 packer-builder-virtualbox-iso: 2015/11/08 02:58:16 reconnecting to TCP connection for SSH
+2015/11/08 02:58:16 packer-builder-virtualbox-iso: 2015/11/08 02:58:16 handshaking with SSH
+2015/11/08 02:58:16 packer-builder-virtualbox-iso: 2015/11/08 02:58:16 handshake error: ssh: handshake failed: EOF
+2015/11/08 02:58:16 packer-builder-virtualbox-iso: 2015/11/08 02:58:16 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 02:58:22 packer-builder-virtualbox-iso: 2015/11/08 02:58:22 Attempting SSH connection...
+2015/11/08 02:58:22 packer-builder-virtualbox-iso: 2015/11/08 02:58:22 reconnecting to TCP connection for SSH
+2015/11/08 02:58:22 packer-builder-virtualbox-iso: 2015/11/08 02:58:22 handshaking with SSH
+2015/11/08 02:58:22 packer-builder-virtualbox-iso: 2015/11/08 02:58:22 handshake error: ssh: handshake failed: EOF
+2015/11/08 02:58:22 packer-builder-virtualbox-iso: 2015/11/08 02:58:22 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 02:58:27 packer-builder-virtualbox-iso: 2015/11/08 02:58:27 Attempting SSH connection...
+2015/11/08 02:58:27 packer-builder-virtualbox-iso: 2015/11/08 02:58:27 reconnecting to TCP connection for SSH
+2015/11/08 02:58:27 packer-builder-virtualbox-iso: 2015/11/08 02:58:27 handshaking with SSH
+2015/11/08 02:58:27 packer-builder-virtualbox-iso: 2015/11/08 02:58:27 handshake error: ssh: handshake failed: EOF
+2015/11/08 02:58:27 packer-builder-virtualbox-iso: 2015/11/08 02:58:27 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 02:58:32 packer-builder-virtualbox-iso: 2015/11/08 02:58:32 Attempting SSH connection...
+2015/11/08 02:58:32 packer-builder-virtualbox-iso: 2015/11/08 02:58:32 reconnecting to TCP connection for SSH
+2015/11/08 02:58:32 packer-builder-virtualbox-iso: 2015/11/08 02:58:32 handshaking with SSH
+2015/11/08 02:58:32 packer-builder-virtualbox-iso: 2015/11/08 02:58:32 handshake error: ssh: handshake failed: EOF
+2015/11/08 02:58:32 packer-builder-virtualbox-iso: 2015/11/08 02:58:32 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 02:58:37 packer-builder-virtualbox-iso: 2015/11/08 02:58:37 Attempting SSH connection...
+2015/11/08 02:58:37 packer-builder-virtualbox-iso: 2015/11/08 02:58:37 reconnecting to TCP connection for SSH
+2015/11/08 02:58:37 packer-builder-virtualbox-iso: 2015/11/08 02:58:37 handshaking with SSH
+2015/11/08 02:58:37 packer-builder-virtualbox-iso: 2015/11/08 02:58:37 handshake error: ssh: handshake failed: EOF
+2015/11/08 02:58:37 packer-builder-virtualbox-iso: 2015/11/08 02:58:37 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 02:58:42 packer-builder-virtualbox-iso: 2015/11/08 02:58:42 Attempting SSH connection...
+2015/11/08 02:58:42 packer-builder-virtualbox-iso: 2015/11/08 02:58:42 reconnecting to TCP connection for SSH
+2015/11/08 02:58:42 packer-builder-virtualbox-iso: 2015/11/08 02:58:42 handshaking with SSH
+2015/11/08 02:58:42 packer-builder-virtualbox-iso: 2015/11/08 02:58:42 handshake error: ssh: handshake failed: EOF
+2015/11/08 02:58:42 packer-builder-virtualbox-iso: 2015/11/08 02:58:42 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 02:58:47 packer-builder-virtualbox-iso: 2015/11/08 02:58:47 Attempting SSH connection...
+2015/11/08 02:58:47 packer-builder-virtualbox-iso: 2015/11/08 02:58:47 reconnecting to TCP connection for SSH
+2015/11/08 02:58:47 packer-builder-virtualbox-iso: 2015/11/08 02:58:47 handshaking with SSH
+2015/11/08 02:58:47 packer-builder-virtualbox-iso: 2015/11/08 02:58:47 handshake error: ssh: handshake failed: EOF
+2015/11/08 02:58:47 packer-builder-virtualbox-iso: 2015/11/08 02:58:47 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 02:58:52 packer-builder-virtualbox-iso: 2015/11/08 02:58:52 Attempting SSH connection...
+2015/11/08 02:58:52 packer-builder-virtualbox-iso: 2015/11/08 02:58:52 reconnecting to TCP connection for SSH
+2015/11/08 02:58:52 packer-builder-virtualbox-iso: 2015/11/08 02:58:52 handshaking with SSH
+2015/11/08 02:58:52 packer-builder-virtualbox-iso: 2015/11/08 02:58:52 handshake error: ssh: handshake failed: EOF
+2015/11/08 02:58:52 packer-builder-virtualbox-iso: 2015/11/08 02:58:52 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 02:58:57 packer-builder-virtualbox-iso: 2015/11/08 02:58:57 Attempting SSH connection...
+2015/11/08 02:58:57 packer-builder-virtualbox-iso: 2015/11/08 02:58:57 reconnecting to TCP connection for SSH
+2015/11/08 02:58:57 packer-builder-virtualbox-iso: 2015/11/08 02:58:57 handshaking with SSH
+2015/11/08 02:58:57 packer-builder-virtualbox-iso: 2015/11/08 02:58:57 handshake error: ssh: handshake failed: EOF
+2015/11/08 02:58:57 packer-builder-virtualbox-iso: 2015/11/08 02:58:57 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 02:59:02 packer-builder-virtualbox-iso: 2015/11/08 02:59:02 Attempting SSH connection...
+2015/11/08 02:59:02 packer-builder-virtualbox-iso: 2015/11/08 02:59:02 reconnecting to TCP connection for SSH
+2015/11/08 02:59:02 packer-builder-virtualbox-iso: 2015/11/08 02:59:02 handshaking with SSH
+2015/11/08 02:59:02 packer-builder-virtualbox-iso: 2015/11/08 02:59:02 handshake error: ssh: handshake failed: EOF
+2015/11/08 02:59:02 packer-builder-virtualbox-iso: 2015/11/08 02:59:02 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 02:59:07 packer-builder-virtualbox-iso: 2015/11/08 02:59:07 Attempting SSH connection...
+2015/11/08 02:59:07 packer-builder-virtualbox-iso: 2015/11/08 02:59:07 reconnecting to TCP connection for SSH
+2015/11/08 02:59:07 packer-builder-virtualbox-iso: 2015/11/08 02:59:07 handshaking with SSH
+2015/11/08 02:59:07 packer-builder-virtualbox-iso: 2015/11/08 02:59:07 handshake error: ssh: handshake failed: EOF
+2015/11/08 02:59:07 packer-builder-virtualbox-iso: 2015/11/08 02:59:07 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 02:59:12 packer-builder-virtualbox-iso: 2015/11/08 02:59:12 Attempting SSH connection...
+2015/11/08 02:59:12 packer-builder-virtualbox-iso: 2015/11/08 02:59:12 reconnecting to TCP connection for SSH
+2015/11/08 02:59:12 packer-builder-virtualbox-iso: 2015/11/08 02:59:12 handshaking with SSH
+2015/11/08 02:59:12 packer-builder-virtualbox-iso: 2015/11/08 02:59:12 handshake error: ssh: handshake failed: EOF
+2015/11/08 02:59:12 packer-builder-virtualbox-iso: 2015/11/08 02:59:12 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 02:59:17 packer-builder-virtualbox-iso: 2015/11/08 02:59:17 Attempting SSH connection...
+2015/11/08 02:59:17 packer-builder-virtualbox-iso: 2015/11/08 02:59:17 reconnecting to TCP connection for SSH
+2015/11/08 02:59:17 packer-builder-virtualbox-iso: 2015/11/08 02:59:17 handshaking with SSH
+2015/11/08 02:59:17 packer-builder-virtualbox-iso: 2015/11/08 02:59:17 handshake error: ssh: handshake failed: EOF
+2015/11/08 02:59:17 packer-builder-virtualbox-iso: 2015/11/08 02:59:17 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 02:59:22 packer-builder-virtualbox-iso: 2015/11/08 02:59:22 Attempting SSH connection...
+2015/11/08 02:59:22 packer-builder-virtualbox-iso: 2015/11/08 02:59:22 reconnecting to TCP connection for SSH
+2015/11/08 02:59:22 packer-builder-virtualbox-iso: 2015/11/08 02:59:22 handshaking with SSH
+2015/11/08 02:59:22 packer-builder-virtualbox-iso: 2015/11/08 02:59:22 handshake error: ssh: handshake failed: EOF
+2015/11/08 02:59:22 packer-builder-virtualbox-iso: 2015/11/08 02:59:22 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 02:59:27 packer-builder-virtualbox-iso: 2015/11/08 02:59:27 Attempting SSH connection...
+2015/11/08 02:59:27 packer-builder-virtualbox-iso: 2015/11/08 02:59:27 reconnecting to TCP connection for SSH
+2015/11/08 02:59:27 packer-builder-virtualbox-iso: 2015/11/08 02:59:27 handshaking with SSH
+2015/11/08 02:59:27 packer-builder-virtualbox-iso: 2015/11/08 02:59:27 handshake error: ssh: handshake failed: EOF
+2015/11/08 02:59:27 packer-builder-virtualbox-iso: 2015/11/08 02:59:27 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 02:59:32 packer-builder-virtualbox-iso: 2015/11/08 02:59:32 Attempting SSH connection...
+2015/11/08 02:59:32 packer-builder-virtualbox-iso: 2015/11/08 02:59:32 reconnecting to TCP connection for SSH
+2015/11/08 02:59:32 packer-builder-virtualbox-iso: 2015/11/08 02:59:32 handshaking with SSH
+2015/11/08 02:59:32 packer-builder-virtualbox-iso: 2015/11/08 02:59:32 handshake error: ssh: handshake failed: EOF
+2015/11/08 02:59:32 packer-builder-virtualbox-iso: 2015/11/08 02:59:32 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 02:59:37 packer-builder-virtualbox-iso: 2015/11/08 02:59:37 Attempting SSH connection...
+2015/11/08 02:59:37 packer-builder-virtualbox-iso: 2015/11/08 02:59:37 reconnecting to TCP connection for SSH
+2015/11/08 02:59:37 packer-builder-virtualbox-iso: 2015/11/08 02:59:37 handshaking with SSH
+2015/11/08 02:59:37 packer-builder-virtualbox-iso: 2015/11/08 02:59:37 handshake error: ssh: handshake failed: EOF
+2015/11/08 02:59:37 packer-builder-virtualbox-iso: 2015/11/08 02:59:37 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 02:59:42 packer-builder-virtualbox-iso: 2015/11/08 02:59:42 Attempting SSH connection...
+2015/11/08 02:59:42 packer-builder-virtualbox-iso: 2015/11/08 02:59:42 reconnecting to TCP connection for SSH
+2015/11/08 02:59:42 packer-builder-virtualbox-iso: 2015/11/08 02:59:42 handshaking with SSH
+2015/11/08 02:59:42 packer-builder-virtualbox-iso: 2015/11/08 02:59:42 handshake error: ssh: handshake failed: EOF
+2015/11/08 02:59:42 packer-builder-virtualbox-iso: 2015/11/08 02:59:42 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 02:59:47 packer-builder-virtualbox-iso: 2015/11/08 02:59:47 Attempting SSH connection...
+2015/11/08 02:59:47 packer-builder-virtualbox-iso: 2015/11/08 02:59:47 reconnecting to TCP connection for SSH
+2015/11/08 02:59:47 packer-builder-virtualbox-iso: 2015/11/08 02:59:47 handshaking with SSH
+2015/11/08 02:59:47 packer-builder-virtualbox-iso: 2015/11/08 02:59:47 handshake error: ssh: handshake failed: EOF
+2015/11/08 02:59:47 packer-builder-virtualbox-iso: 2015/11/08 02:59:47 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 02:59:52 packer-builder-virtualbox-iso: 2015/11/08 02:59:52 Attempting SSH connection...
+2015/11/08 02:59:52 packer-builder-virtualbox-iso: 2015/11/08 02:59:52 reconnecting to TCP connection for SSH
+2015/11/08 02:59:52 packer-builder-virtualbox-iso: 2015/11/08 02:59:52 handshaking with SSH
+2015/11/08 02:59:52 packer-builder-virtualbox-iso: 2015/11/08 02:59:52 handshake error: ssh: handshake failed: EOF
+2015/11/08 02:59:52 packer-builder-virtualbox-iso: 2015/11/08 02:59:52 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 02:59:57 packer-builder-virtualbox-iso: 2015/11/08 02:59:57 Attempting SSH connection...
+2015/11/08 02:59:57 packer-builder-virtualbox-iso: 2015/11/08 02:59:57 reconnecting to TCP connection for SSH
+2015/11/08 02:59:57 packer-builder-virtualbox-iso: 2015/11/08 02:59:57 handshaking with SSH
+2015/11/08 02:59:57 packer-builder-virtualbox-iso: 2015/11/08 02:59:57 handshake error: ssh: handshake failed: EOF
+2015/11/08 02:59:57 packer-builder-virtualbox-iso: 2015/11/08 02:59:57 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:00:02 packer-builder-virtualbox-iso: 2015/11/08 03:00:02 Attempting SSH connection...
+2015/11/08 03:00:02 packer-builder-virtualbox-iso: 2015/11/08 03:00:02 reconnecting to TCP connection for SSH
+2015/11/08 03:00:02 packer-builder-virtualbox-iso: 2015/11/08 03:00:02 handshaking with SSH
+2015/11/08 03:00:02 packer-builder-virtualbox-iso: 2015/11/08 03:00:02 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:00:02 packer-builder-virtualbox-iso: 2015/11/08 03:00:02 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:00:07 packer-builder-virtualbox-iso: 2015/11/08 03:00:07 Attempting SSH connection...
+2015/11/08 03:00:07 packer-builder-virtualbox-iso: 2015/11/08 03:00:07 reconnecting to TCP connection for SSH
+2015/11/08 03:00:07 packer-builder-virtualbox-iso: 2015/11/08 03:00:07 handshaking with SSH
+2015/11/08 03:00:07 packer-builder-virtualbox-iso: 2015/11/08 03:00:07 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:00:07 packer-builder-virtualbox-iso: 2015/11/08 03:00:07 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:00:12 packer-builder-virtualbox-iso: 2015/11/08 03:00:12 Attempting SSH connection...
+2015/11/08 03:00:12 packer-builder-virtualbox-iso: 2015/11/08 03:00:12 reconnecting to TCP connection for SSH
+2015/11/08 03:00:12 packer-builder-virtualbox-iso: 2015/11/08 03:00:12 handshaking with SSH
+2015/11/08 03:00:12 packer-builder-virtualbox-iso: 2015/11/08 03:00:12 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:00:12 packer-builder-virtualbox-iso: 2015/11/08 03:00:12 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:00:17 packer-builder-virtualbox-iso: 2015/11/08 03:00:17 Attempting SSH connection...
+2015/11/08 03:00:17 packer-builder-virtualbox-iso: 2015/11/08 03:00:17 reconnecting to TCP connection for SSH
+2015/11/08 03:00:17 packer-builder-virtualbox-iso: 2015/11/08 03:00:17 handshaking with SSH
+2015/11/08 03:00:17 packer-builder-virtualbox-iso: 2015/11/08 03:00:17 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:00:17 packer-builder-virtualbox-iso: 2015/11/08 03:00:17 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:00:22 packer-builder-virtualbox-iso: 2015/11/08 03:00:22 Attempting SSH connection...
+2015/11/08 03:00:22 packer-builder-virtualbox-iso: 2015/11/08 03:00:22 reconnecting to TCP connection for SSH
+2015/11/08 03:00:22 packer-builder-virtualbox-iso: 2015/11/08 03:00:22 handshaking with SSH
+2015/11/08 03:00:22 packer-builder-virtualbox-iso: 2015/11/08 03:00:22 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:00:22 packer-builder-virtualbox-iso: 2015/11/08 03:00:22 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:00:27 packer-builder-virtualbox-iso: 2015/11/08 03:00:27 Attempting SSH connection...
+2015/11/08 03:00:27 packer-builder-virtualbox-iso: 2015/11/08 03:00:27 reconnecting to TCP connection for SSH
+2015/11/08 03:00:27 packer-builder-virtualbox-iso: 2015/11/08 03:00:27 handshaking with SSH
+2015/11/08 03:00:27 packer-builder-virtualbox-iso: 2015/11/08 03:00:27 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:00:27 packer-builder-virtualbox-iso: 2015/11/08 03:00:27 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:00:32 packer-builder-virtualbox-iso: 2015/11/08 03:00:32 Attempting SSH connection...
+2015/11/08 03:00:32 packer-builder-virtualbox-iso: 2015/11/08 03:00:32 reconnecting to TCP connection for SSH
+2015/11/08 03:00:32 packer-builder-virtualbox-iso: 2015/11/08 03:00:32 handshaking with SSH
+2015/11/08 03:00:32 packer-builder-virtualbox-iso: 2015/11/08 03:00:32 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:00:32 packer-builder-virtualbox-iso: 2015/11/08 03:00:32 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:00:37 packer-builder-virtualbox-iso: 2015/11/08 03:00:37 Attempting SSH connection...
+2015/11/08 03:00:37 packer-builder-virtualbox-iso: 2015/11/08 03:00:37 reconnecting to TCP connection for SSH
+2015/11/08 03:00:37 packer-builder-virtualbox-iso: 2015/11/08 03:00:37 handshaking with SSH
+2015/11/08 03:00:37 packer-builder-virtualbox-iso: 2015/11/08 03:00:37 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:00:37 packer-builder-virtualbox-iso: 2015/11/08 03:00:37 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:00:42 packer-builder-virtualbox-iso: 2015/11/08 03:00:42 Attempting SSH connection...
+2015/11/08 03:00:42 packer-builder-virtualbox-iso: 2015/11/08 03:00:42 reconnecting to TCP connection for SSH
+2015/11/08 03:00:42 packer-builder-virtualbox-iso: 2015/11/08 03:00:42 handshaking with SSH
+2015/11/08 03:00:42 packer-builder-virtualbox-iso: 2015/11/08 03:00:42 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:00:42 packer-builder-virtualbox-iso: 2015/11/08 03:00:42 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:00:47 packer-builder-virtualbox-iso: 2015/11/08 03:00:47 Attempting SSH connection...
+2015/11/08 03:00:47 packer-builder-virtualbox-iso: 2015/11/08 03:00:47 reconnecting to TCP connection for SSH
+2015/11/08 03:00:47 packer-builder-virtualbox-iso: 2015/11/08 03:00:47 handshaking with SSH
+2015/11/08 03:00:47 packer-builder-virtualbox-iso: 2015/11/08 03:00:47 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:00:47 packer-builder-virtualbox-iso: 2015/11/08 03:00:47 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:00:52 packer-builder-virtualbox-iso: 2015/11/08 03:00:52 Attempting SSH connection...
+2015/11/08 03:00:52 packer-builder-virtualbox-iso: 2015/11/08 03:00:52 reconnecting to TCP connection for SSH
+2015/11/08 03:00:52 packer-builder-virtualbox-iso: 2015/11/08 03:00:52 handshaking with SSH
+2015/11/08 03:00:52 packer-builder-virtualbox-iso: 2015/11/08 03:00:52 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:00:52 packer-builder-virtualbox-iso: 2015/11/08 03:00:52 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:00:57 packer-builder-virtualbox-iso: 2015/11/08 03:00:57 Attempting SSH connection...
+2015/11/08 03:00:57 packer-builder-virtualbox-iso: 2015/11/08 03:00:57 reconnecting to TCP connection for SSH
+2015/11/08 03:00:57 packer-builder-virtualbox-iso: 2015/11/08 03:00:57 handshaking with SSH
+2015/11/08 03:00:57 packer-builder-virtualbox-iso: 2015/11/08 03:00:57 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:00:57 packer-builder-virtualbox-iso: 2015/11/08 03:00:57 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:01:02 packer-builder-virtualbox-iso: 2015/11/08 03:01:02 Attempting SSH connection...
+2015/11/08 03:01:02 packer-builder-virtualbox-iso: 2015/11/08 03:01:02 reconnecting to TCP connection for SSH
+2015/11/08 03:01:02 packer-builder-virtualbox-iso: 2015/11/08 03:01:02 handshaking with SSH
+2015/11/08 03:01:02 packer-builder-virtualbox-iso: 2015/11/08 03:01:02 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:01:02 packer-builder-virtualbox-iso: 2015/11/08 03:01:02 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:01:07 packer-builder-virtualbox-iso: 2015/11/08 03:01:07 Attempting SSH connection...
+2015/11/08 03:01:07 packer-builder-virtualbox-iso: 2015/11/08 03:01:07 reconnecting to TCP connection for SSH
+2015/11/08 03:01:07 packer-builder-virtualbox-iso: 2015/11/08 03:01:07 handshaking with SSH
+2015/11/08 03:01:07 packer-builder-virtualbox-iso: 2015/11/08 03:01:07 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:01:07 packer-builder-virtualbox-iso: 2015/11/08 03:01:07 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:01:12 packer-builder-virtualbox-iso: 2015/11/08 03:01:12 Attempting SSH connection...
+2015/11/08 03:01:12 packer-builder-virtualbox-iso: 2015/11/08 03:01:12 reconnecting to TCP connection for SSH
+2015/11/08 03:01:12 packer-builder-virtualbox-iso: 2015/11/08 03:01:12 handshaking with SSH
+2015/11/08 03:01:12 packer-builder-virtualbox-iso: 2015/11/08 03:01:12 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:01:12 packer-builder-virtualbox-iso: 2015/11/08 03:01:12 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:01:17 packer-builder-virtualbox-iso: 2015/11/08 03:01:17 Attempting SSH connection...
+2015/11/08 03:01:17 packer-builder-virtualbox-iso: 2015/11/08 03:01:17 reconnecting to TCP connection for SSH
+2015/11/08 03:01:17 packer-builder-virtualbox-iso: 2015/11/08 03:01:17 handshaking with SSH
+2015/11/08 03:01:17 packer-builder-virtualbox-iso: 2015/11/08 03:01:17 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:01:17 packer-builder-virtualbox-iso: 2015/11/08 03:01:17 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:01:22 packer-builder-virtualbox-iso: 2015/11/08 03:01:22 Attempting SSH connection...
+2015/11/08 03:01:22 packer-builder-virtualbox-iso: 2015/11/08 03:01:22 reconnecting to TCP connection for SSH
+2015/11/08 03:01:22 packer-builder-virtualbox-iso: 2015/11/08 03:01:22 handshaking with SSH
+2015/11/08 03:01:22 packer-builder-virtualbox-iso: 2015/11/08 03:01:22 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:01:22 packer-builder-virtualbox-iso: 2015/11/08 03:01:22 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:01:27 packer-builder-virtualbox-iso: 2015/11/08 03:01:27 Attempting SSH connection...
+2015/11/08 03:01:27 packer-builder-virtualbox-iso: 2015/11/08 03:01:27 reconnecting to TCP connection for SSH
+2015/11/08 03:01:27 packer-builder-virtualbox-iso: 2015/11/08 03:01:27 handshaking with SSH
+2015/11/08 03:01:27 packer-builder-virtualbox-iso: 2015/11/08 03:01:27 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:01:27 packer-builder-virtualbox-iso: 2015/11/08 03:01:27 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:01:32 packer-builder-virtualbox-iso: 2015/11/08 03:01:32 Attempting SSH connection...
+2015/11/08 03:01:32 packer-builder-virtualbox-iso: 2015/11/08 03:01:32 reconnecting to TCP connection for SSH
+2015/11/08 03:01:32 packer-builder-virtualbox-iso: 2015/11/08 03:01:32 handshaking with SSH
+2015/11/08 03:01:32 packer-builder-virtualbox-iso: 2015/11/08 03:01:32 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:01:32 packer-builder-virtualbox-iso: 2015/11/08 03:01:32 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:01:37 packer-builder-virtualbox-iso: 2015/11/08 03:01:37 Attempting SSH connection...
+2015/11/08 03:01:37 packer-builder-virtualbox-iso: 2015/11/08 03:01:37 reconnecting to TCP connection for SSH
+2015/11/08 03:01:37 packer-builder-virtualbox-iso: 2015/11/08 03:01:37 handshaking with SSH
+2015/11/08 03:01:37 packer-builder-virtualbox-iso: 2015/11/08 03:01:37 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:01:37 packer-builder-virtualbox-iso: 2015/11/08 03:01:37 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:01:42 packer-builder-virtualbox-iso: 2015/11/08 03:01:42 Attempting SSH connection...
+2015/11/08 03:01:42 packer-builder-virtualbox-iso: 2015/11/08 03:01:42 reconnecting to TCP connection for SSH
+2015/11/08 03:01:42 packer-builder-virtualbox-iso: 2015/11/08 03:01:42 handshaking with SSH
+2015/11/08 03:01:42 packer-builder-virtualbox-iso: 2015/11/08 03:01:42 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:01:42 packer-builder-virtualbox-iso: 2015/11/08 03:01:42 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:01:47 packer-builder-virtualbox-iso: 2015/11/08 03:01:47 Attempting SSH connection...
+2015/11/08 03:01:47 packer-builder-virtualbox-iso: 2015/11/08 03:01:47 reconnecting to TCP connection for SSH
+2015/11/08 03:01:47 packer-builder-virtualbox-iso: 2015/11/08 03:01:47 handshaking with SSH
+2015/11/08 03:01:47 packer-builder-virtualbox-iso: 2015/11/08 03:01:47 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:01:47 packer-builder-virtualbox-iso: 2015/11/08 03:01:47 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:01:52 packer-builder-virtualbox-iso: 2015/11/08 03:01:52 Attempting SSH connection...
+2015/11/08 03:01:52 packer-builder-virtualbox-iso: 2015/11/08 03:01:52 reconnecting to TCP connection for SSH
+2015/11/08 03:01:52 packer-builder-virtualbox-iso: 2015/11/08 03:01:52 handshaking with SSH
+2015/11/08 03:01:52 packer-builder-virtualbox-iso: 2015/11/08 03:01:52 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:01:52 packer-builder-virtualbox-iso: 2015/11/08 03:01:52 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:01:57 packer-builder-virtualbox-iso: 2015/11/08 03:01:57 Attempting SSH connection...
+2015/11/08 03:01:57 packer-builder-virtualbox-iso: 2015/11/08 03:01:57 reconnecting to TCP connection for SSH
+2015/11/08 03:01:57 packer-builder-virtualbox-iso: 2015/11/08 03:01:57 handshaking with SSH
+2015/11/08 03:01:57 packer-builder-virtualbox-iso: 2015/11/08 03:01:57 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:01:57 packer-builder-virtualbox-iso: 2015/11/08 03:01:57 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:02:02 packer-builder-virtualbox-iso: 2015/11/08 03:02:02 Attempting SSH connection...
+2015/11/08 03:02:02 packer-builder-virtualbox-iso: 2015/11/08 03:02:02 reconnecting to TCP connection for SSH
+2015/11/08 03:02:02 packer-builder-virtualbox-iso: 2015/11/08 03:02:02 handshaking with SSH
+2015/11/08 03:02:02 packer-builder-virtualbox-iso: 2015/11/08 03:02:02 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:02:02 packer-builder-virtualbox-iso: 2015/11/08 03:02:02 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:02:07 packer-builder-virtualbox-iso: 2015/11/08 03:02:07 Attempting SSH connection...
+2015/11/08 03:02:07 packer-builder-virtualbox-iso: 2015/11/08 03:02:07 reconnecting to TCP connection for SSH
+2015/11/08 03:02:07 packer-builder-virtualbox-iso: 2015/11/08 03:02:07 handshaking with SSH
+2015/11/08 03:02:07 packer-builder-virtualbox-iso: 2015/11/08 03:02:07 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:02:07 packer-builder-virtualbox-iso: 2015/11/08 03:02:07 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:02:12 packer-builder-virtualbox-iso: 2015/11/08 03:02:12 Attempting SSH connection...
+2015/11/08 03:02:12 packer-builder-virtualbox-iso: 2015/11/08 03:02:12 reconnecting to TCP connection for SSH
+2015/11/08 03:02:12 packer-builder-virtualbox-iso: 2015/11/08 03:02:12 handshaking with SSH
+2015/11/08 03:02:12 packer-builder-virtualbox-iso: 2015/11/08 03:02:12 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:02:12 packer-builder-virtualbox-iso: 2015/11/08 03:02:12 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:02:17 packer-builder-virtualbox-iso: 2015/11/08 03:02:17 Attempting SSH connection...
+2015/11/08 03:02:17 packer-builder-virtualbox-iso: 2015/11/08 03:02:17 reconnecting to TCP connection for SSH
+2015/11/08 03:02:17 packer-builder-virtualbox-iso: 2015/11/08 03:02:17 handshaking with SSH
+2015/11/08 03:02:17 packer-builder-virtualbox-iso: 2015/11/08 03:02:17 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:02:17 packer-builder-virtualbox-iso: 2015/11/08 03:02:17 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:02:22 packer-builder-virtualbox-iso: 2015/11/08 03:02:22 Attempting SSH connection...
+2015/11/08 03:02:22 packer-builder-virtualbox-iso: 2015/11/08 03:02:22 reconnecting to TCP connection for SSH
+2015/11/08 03:02:22 packer-builder-virtualbox-iso: 2015/11/08 03:02:22 handshaking with SSH
+2015/11/08 03:02:22 packer-builder-virtualbox-iso: 2015/11/08 03:02:22 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:02:22 packer-builder-virtualbox-iso: 2015/11/08 03:02:22 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:02:27 packer-builder-virtualbox-iso: 2015/11/08 03:02:27 Attempting SSH connection...
+2015/11/08 03:02:27 packer-builder-virtualbox-iso: 2015/11/08 03:02:27 reconnecting to TCP connection for SSH
+2015/11/08 03:02:27 packer-builder-virtualbox-iso: 2015/11/08 03:02:27 handshaking with SSH
+2015/11/08 03:02:27 packer-builder-virtualbox-iso: 2015/11/08 03:02:27 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:02:27 packer-builder-virtualbox-iso: 2015/11/08 03:02:27 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:02:32 packer-builder-virtualbox-iso: 2015/11/08 03:02:32 Attempting SSH connection...
+2015/11/08 03:02:32 packer-builder-virtualbox-iso: 2015/11/08 03:02:32 reconnecting to TCP connection for SSH
+2015/11/08 03:02:32 packer-builder-virtualbox-iso: 2015/11/08 03:02:32 handshaking with SSH
+2015/11/08 03:02:32 packer-builder-virtualbox-iso: 2015/11/08 03:02:32 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:02:32 packer-builder-virtualbox-iso: 2015/11/08 03:02:32 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:02:37 packer-builder-virtualbox-iso: 2015/11/08 03:02:37 Attempting SSH connection...
+2015/11/08 03:02:37 packer-builder-virtualbox-iso: 2015/11/08 03:02:37 reconnecting to TCP connection for SSH
+2015/11/08 03:02:37 packer-builder-virtualbox-iso: 2015/11/08 03:02:37 handshaking with SSH
+2015/11/08 03:02:37 packer-builder-virtualbox-iso: 2015/11/08 03:02:37 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:02:37 packer-builder-virtualbox-iso: 2015/11/08 03:02:37 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:02:42 packer-builder-virtualbox-iso: 2015/11/08 03:02:42 Attempting SSH connection...
+2015/11/08 03:02:42 packer-builder-virtualbox-iso: 2015/11/08 03:02:42 reconnecting to TCP connection for SSH
+2015/11/08 03:02:42 packer-builder-virtualbox-iso: 2015/11/08 03:02:42 handshaking with SSH
+2015/11/08 03:02:42 packer-builder-virtualbox-iso: 2015/11/08 03:02:42 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:02:42 packer-builder-virtualbox-iso: 2015/11/08 03:02:42 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:02:47 packer-builder-virtualbox-iso: 2015/11/08 03:02:47 Attempting SSH connection...
+2015/11/08 03:02:47 packer-builder-virtualbox-iso: 2015/11/08 03:02:47 reconnecting to TCP connection for SSH
+2015/11/08 03:02:47 packer-builder-virtualbox-iso: 2015/11/08 03:02:47 handshaking with SSH
+2015/11/08 03:02:47 packer-builder-virtualbox-iso: 2015/11/08 03:02:47 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:02:47 packer-builder-virtualbox-iso: 2015/11/08 03:02:47 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:02:52 packer-builder-virtualbox-iso: 2015/11/08 03:02:52 Attempting SSH connection...
+2015/11/08 03:02:52 packer-builder-virtualbox-iso: 2015/11/08 03:02:52 reconnecting to TCP connection for SSH
+2015/11/08 03:02:52 packer-builder-virtualbox-iso: 2015/11/08 03:02:52 handshaking with SSH
+2015/11/08 03:02:52 packer-builder-virtualbox-iso: 2015/11/08 03:02:52 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:02:52 packer-builder-virtualbox-iso: 2015/11/08 03:02:52 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:02:57 packer-builder-virtualbox-iso: 2015/11/08 03:02:57 Attempting SSH connection...
+2015/11/08 03:02:57 packer-builder-virtualbox-iso: 2015/11/08 03:02:57 reconnecting to TCP connection for SSH
+2015/11/08 03:02:57 packer-builder-virtualbox-iso: 2015/11/08 03:02:57 handshaking with SSH
+2015/11/08 03:02:57 packer-builder-virtualbox-iso: 2015/11/08 03:02:57 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:02:57 packer-builder-virtualbox-iso: 2015/11/08 03:02:57 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:03:02 packer-builder-virtualbox-iso: 2015/11/08 03:03:02 Attempting SSH connection...
+2015/11/08 03:03:02 packer-builder-virtualbox-iso: 2015/11/08 03:03:02 reconnecting to TCP connection for SSH
+2015/11/08 03:03:02 packer-builder-virtualbox-iso: 2015/11/08 03:03:02 handshaking with SSH
+2015/11/08 03:03:02 packer-builder-virtualbox-iso: 2015/11/08 03:03:02 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:03:02 packer-builder-virtualbox-iso: 2015/11/08 03:03:02 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:03:07 packer-builder-virtualbox-iso: 2015/11/08 03:03:07 Attempting SSH connection...
+2015/11/08 03:03:07 packer-builder-virtualbox-iso: 2015/11/08 03:03:07 reconnecting to TCP connection for SSH
+2015/11/08 03:03:07 packer-builder-virtualbox-iso: 2015/11/08 03:03:07 handshaking with SSH
+2015/11/08 03:03:07 packer-builder-virtualbox-iso: 2015/11/08 03:03:07 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:03:07 packer-builder-virtualbox-iso: 2015/11/08 03:03:07 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:03:12 packer-builder-virtualbox-iso: 2015/11/08 03:03:12 Attempting SSH connection...
+2015/11/08 03:03:12 packer-builder-virtualbox-iso: 2015/11/08 03:03:12 reconnecting to TCP connection for SSH
+2015/11/08 03:03:12 packer-builder-virtualbox-iso: 2015/11/08 03:03:12 handshaking with SSH
+2015/11/08 03:03:12 packer-builder-virtualbox-iso: 2015/11/08 03:03:12 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:03:12 packer-builder-virtualbox-iso: 2015/11/08 03:03:12 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:03:17 packer-builder-virtualbox-iso: 2015/11/08 03:03:17 Attempting SSH connection...
+2015/11/08 03:03:17 packer-builder-virtualbox-iso: 2015/11/08 03:03:17 reconnecting to TCP connection for SSH
+2015/11/08 03:03:17 packer-builder-virtualbox-iso: 2015/11/08 03:03:17 handshaking with SSH
+2015/11/08 03:03:17 packer-builder-virtualbox-iso: 2015/11/08 03:03:17 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:03:17 packer-builder-virtualbox-iso: 2015/11/08 03:03:17 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:03:22 packer-builder-virtualbox-iso: 2015/11/08 03:03:22 Attempting SSH connection...
+2015/11/08 03:03:22 packer-builder-virtualbox-iso: 2015/11/08 03:03:22 reconnecting to TCP connection for SSH
+2015/11/08 03:03:22 packer-builder-virtualbox-iso: 2015/11/08 03:03:22 handshaking with SSH
+2015/11/08 03:03:22 packer-builder-virtualbox-iso: 2015/11/08 03:03:22 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:03:22 packer-builder-virtualbox-iso: 2015/11/08 03:03:22 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:03:27 packer-builder-virtualbox-iso: 2015/11/08 03:03:27 Attempting SSH connection...
+2015/11/08 03:03:27 packer-builder-virtualbox-iso: 2015/11/08 03:03:27 reconnecting to TCP connection for SSH
+2015/11/08 03:03:27 packer-builder-virtualbox-iso: 2015/11/08 03:03:27 handshaking with SSH
+2015/11/08 03:03:27 packer-builder-virtualbox-iso: 2015/11/08 03:03:27 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:03:27 packer-builder-virtualbox-iso: 2015/11/08 03:03:27 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:03:32 packer-builder-virtualbox-iso: 2015/11/08 03:03:32 Attempting SSH connection...
+2015/11/08 03:03:32 packer-builder-virtualbox-iso: 2015/11/08 03:03:32 reconnecting to TCP connection for SSH
+2015/11/08 03:03:32 packer-builder-virtualbox-iso: 2015/11/08 03:03:32 handshaking with SSH
+2015/11/08 03:03:32 packer-builder-virtualbox-iso: 2015/11/08 03:03:32 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:03:32 packer-builder-virtualbox-iso: 2015/11/08 03:03:32 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:03:37 packer-builder-virtualbox-iso: 2015/11/08 03:03:37 Attempting SSH connection...
+2015/11/08 03:03:37 packer-builder-virtualbox-iso: 2015/11/08 03:03:37 reconnecting to TCP connection for SSH
+2015/11/08 03:03:37 packer-builder-virtualbox-iso: 2015/11/08 03:03:37 handshaking with SSH
+2015/11/08 03:03:37 packer-builder-virtualbox-iso: 2015/11/08 03:03:37 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:03:37 packer-builder-virtualbox-iso: 2015/11/08 03:03:37 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:03:42 packer-builder-virtualbox-iso: 2015/11/08 03:03:42 Attempting SSH connection...
+2015/11/08 03:03:42 packer-builder-virtualbox-iso: 2015/11/08 03:03:42 reconnecting to TCP connection for SSH
+2015/11/08 03:03:42 packer-builder-virtualbox-iso: 2015/11/08 03:03:42 handshaking with SSH
+2015/11/08 03:03:42 packer-builder-virtualbox-iso: 2015/11/08 03:03:42 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:03:42 packer-builder-virtualbox-iso: 2015/11/08 03:03:42 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:03:47 packer-builder-virtualbox-iso: 2015/11/08 03:03:47 Attempting SSH connection...
+2015/11/08 03:03:47 packer-builder-virtualbox-iso: 2015/11/08 03:03:47 reconnecting to TCP connection for SSH
+2015/11/08 03:03:47 packer-builder-virtualbox-iso: 2015/11/08 03:03:47 handshaking with SSH
+2015/11/08 03:03:47 packer-builder-virtualbox-iso: 2015/11/08 03:03:47 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:03:47 packer-builder-virtualbox-iso: 2015/11/08 03:03:47 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:03:52 packer-builder-virtualbox-iso: 2015/11/08 03:03:52 Attempting SSH connection...
+2015/11/08 03:03:52 packer-builder-virtualbox-iso: 2015/11/08 03:03:52 reconnecting to TCP connection for SSH
+2015/11/08 03:03:52 packer-builder-virtualbox-iso: 2015/11/08 03:03:52 handshaking with SSH
+2015/11/08 03:03:52 packer-builder-virtualbox-iso: 2015/11/08 03:03:52 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:03:52 packer-builder-virtualbox-iso: 2015/11/08 03:03:52 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:03:57 packer-builder-virtualbox-iso: 2015/11/08 03:03:57 Attempting SSH connection...
+2015/11/08 03:03:57 packer-builder-virtualbox-iso: 2015/11/08 03:03:57 reconnecting to TCP connection for SSH
+2015/11/08 03:03:57 packer-builder-virtualbox-iso: 2015/11/08 03:03:57 handshaking with SSH
+2015/11/08 03:03:57 packer-builder-virtualbox-iso: 2015/11/08 03:03:57 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:03:57 packer-builder-virtualbox-iso: 2015/11/08 03:03:57 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:04:02 packer-builder-virtualbox-iso: 2015/11/08 03:04:02 Attempting SSH connection...
+2015/11/08 03:04:02 packer-builder-virtualbox-iso: 2015/11/08 03:04:02 reconnecting to TCP connection for SSH
+2015/11/08 03:04:02 packer-builder-virtualbox-iso: 2015/11/08 03:04:02 handshaking with SSH
+2015/11/08 03:04:02 packer-builder-virtualbox-iso: 2015/11/08 03:04:02 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:04:02 packer-builder-virtualbox-iso: 2015/11/08 03:04:02 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:04:07 packer-builder-virtualbox-iso: 2015/11/08 03:04:07 Attempting SSH connection...
+2015/11/08 03:04:07 packer-builder-virtualbox-iso: 2015/11/08 03:04:07 reconnecting to TCP connection for SSH
+2015/11/08 03:04:07 packer-builder-virtualbox-iso: 2015/11/08 03:04:07 handshaking with SSH
+2015/11/08 03:04:07 packer-builder-virtualbox-iso: 2015/11/08 03:04:07 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:04:07 packer-builder-virtualbox-iso: 2015/11/08 03:04:07 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:04:12 packer-builder-virtualbox-iso: 2015/11/08 03:04:12 Attempting SSH connection...
+2015/11/08 03:04:12 packer-builder-virtualbox-iso: 2015/11/08 03:04:12 reconnecting to TCP connection for SSH
+2015/11/08 03:04:12 packer-builder-virtualbox-iso: 2015/11/08 03:04:12 handshaking with SSH
+2015/11/08 03:04:12 packer-builder-virtualbox-iso: 2015/11/08 03:04:12 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:04:12 packer-builder-virtualbox-iso: 2015/11/08 03:04:12 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:04:17 packer-builder-virtualbox-iso: 2015/11/08 03:04:17 Attempting SSH connection...
+2015/11/08 03:04:17 packer-builder-virtualbox-iso: 2015/11/08 03:04:17 reconnecting to TCP connection for SSH
+2015/11/08 03:04:17 packer-builder-virtualbox-iso: 2015/11/08 03:04:17 handshaking with SSH
+2015/11/08 03:04:17 packer-builder-virtualbox-iso: 2015/11/08 03:04:17 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:04:17 packer-builder-virtualbox-iso: 2015/11/08 03:04:17 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:04:22 packer-builder-virtualbox-iso: 2015/11/08 03:04:22 Attempting SSH connection...
+2015/11/08 03:04:22 packer-builder-virtualbox-iso: 2015/11/08 03:04:22 reconnecting to TCP connection for SSH
+2015/11/08 03:04:22 packer-builder-virtualbox-iso: 2015/11/08 03:04:22 handshaking with SSH
+2015/11/08 03:04:22 packer-builder-virtualbox-iso: 2015/11/08 03:04:22 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:04:22 packer-builder-virtualbox-iso: 2015/11/08 03:04:22 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:04:27 packer-builder-virtualbox-iso: 2015/11/08 03:04:27 Attempting SSH connection...
+2015/11/08 03:04:27 packer-builder-virtualbox-iso: 2015/11/08 03:04:27 reconnecting to TCP connection for SSH
+2015/11/08 03:04:27 packer-builder-virtualbox-iso: 2015/11/08 03:04:27 handshaking with SSH
+2015/11/08 03:04:27 packer-builder-virtualbox-iso: 2015/11/08 03:04:27 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:04:27 packer-builder-virtualbox-iso: 2015/11/08 03:04:27 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:04:32 packer-builder-virtualbox-iso: 2015/11/08 03:04:32 Attempting SSH connection...
+2015/11/08 03:04:32 packer-builder-virtualbox-iso: 2015/11/08 03:04:32 reconnecting to TCP connection for SSH
+2015/11/08 03:04:32 packer-builder-virtualbox-iso: 2015/11/08 03:04:32 handshaking with SSH
+2015/11/08 03:04:32 packer-builder-virtualbox-iso: 2015/11/08 03:04:32 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:04:32 packer-builder-virtualbox-iso: 2015/11/08 03:04:32 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:04:37 packer-builder-virtualbox-iso: 2015/11/08 03:04:37 Attempting SSH connection...
+2015/11/08 03:04:37 packer-builder-virtualbox-iso: 2015/11/08 03:04:37 reconnecting to TCP connection for SSH
+2015/11/08 03:04:37 packer-builder-virtualbox-iso: 2015/11/08 03:04:37 handshaking with SSH
+2015/11/08 03:04:37 packer-builder-virtualbox-iso: 2015/11/08 03:04:37 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:04:37 packer-builder-virtualbox-iso: 2015/11/08 03:04:37 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:04:42 packer-builder-virtualbox-iso: 2015/11/08 03:04:42 Attempting SSH connection...
+2015/11/08 03:04:42 packer-builder-virtualbox-iso: 2015/11/08 03:04:42 reconnecting to TCP connection for SSH
+2015/11/08 03:04:42 packer-builder-virtualbox-iso: 2015/11/08 03:04:42 handshaking with SSH
+2015/11/08 03:04:42 packer-builder-virtualbox-iso: 2015/11/08 03:04:42 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:04:42 packer-builder-virtualbox-iso: 2015/11/08 03:04:42 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:04:47 packer-builder-virtualbox-iso: 2015/11/08 03:04:47 Attempting SSH connection...
+2015/11/08 03:04:47 packer-builder-virtualbox-iso: 2015/11/08 03:04:47 reconnecting to TCP connection for SSH
+2015/11/08 03:04:47 packer-builder-virtualbox-iso: 2015/11/08 03:04:47 handshaking with SSH
+2015/11/08 03:04:47 packer-builder-virtualbox-iso: 2015/11/08 03:04:47 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:04:47 packer-builder-virtualbox-iso: 2015/11/08 03:04:47 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:04:52 packer-builder-virtualbox-iso: 2015/11/08 03:04:52 Attempting SSH connection...
+2015/11/08 03:04:52 packer-builder-virtualbox-iso: 2015/11/08 03:04:52 reconnecting to TCP connection for SSH
+2015/11/08 03:04:52 packer-builder-virtualbox-iso: 2015/11/08 03:04:52 handshaking with SSH
+2015/11/08 03:04:52 packer-builder-virtualbox-iso: 2015/11/08 03:04:52 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:04:52 packer-builder-virtualbox-iso: 2015/11/08 03:04:52 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:04:57 packer-builder-virtualbox-iso: 2015/11/08 03:04:57 Attempting SSH connection...
+2015/11/08 03:04:57 packer-builder-virtualbox-iso: 2015/11/08 03:04:57 reconnecting to TCP connection for SSH
+2015/11/08 03:04:57 packer-builder-virtualbox-iso: 2015/11/08 03:04:57 handshaking with SSH
+2015/11/08 03:04:57 packer-builder-virtualbox-iso: 2015/11/08 03:04:57 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:04:57 packer-builder-virtualbox-iso: 2015/11/08 03:04:57 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:05:02 packer-builder-virtualbox-iso: 2015/11/08 03:05:02 Attempting SSH connection...
+2015/11/08 03:05:02 packer-builder-virtualbox-iso: 2015/11/08 03:05:02 reconnecting to TCP connection for SSH
+2015/11/08 03:05:02 packer-builder-virtualbox-iso: 2015/11/08 03:05:02 handshaking with SSH
+2015/11/08 03:05:02 packer-builder-virtualbox-iso: 2015/11/08 03:05:02 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:05:02 packer-builder-virtualbox-iso: 2015/11/08 03:05:02 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:05:07 packer-builder-virtualbox-iso: 2015/11/08 03:05:07 Attempting SSH connection...
+2015/11/08 03:05:07 packer-builder-virtualbox-iso: 2015/11/08 03:05:07 reconnecting to TCP connection for SSH
+2015/11/08 03:05:07 packer-builder-virtualbox-iso: 2015/11/08 03:05:07 handshaking with SSH
+2015/11/08 03:05:07 packer-builder-virtualbox-iso: 2015/11/08 03:05:07 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:05:07 packer-builder-virtualbox-iso: 2015/11/08 03:05:07 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:05:12 packer-builder-virtualbox-iso: 2015/11/08 03:05:12 Attempting SSH connection...
+2015/11/08 03:05:12 packer-builder-virtualbox-iso: 2015/11/08 03:05:12 reconnecting to TCP connection for SSH
+2015/11/08 03:05:12 packer-builder-virtualbox-iso: 2015/11/08 03:05:12 handshaking with SSH
+2015/11/08 03:05:12 packer-builder-virtualbox-iso: 2015/11/08 03:05:12 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:05:12 packer-builder-virtualbox-iso: 2015/11/08 03:05:12 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:05:17 packer-builder-virtualbox-iso: 2015/11/08 03:05:17 Attempting SSH connection...
+2015/11/08 03:05:17 packer-builder-virtualbox-iso: 2015/11/08 03:05:17 reconnecting to TCP connection for SSH
+2015/11/08 03:05:17 packer-builder-virtualbox-iso: 2015/11/08 03:05:17 handshaking with SSH
+2015/11/08 03:05:17 packer-builder-virtualbox-iso: 2015/11/08 03:05:17 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:05:17 packer-builder-virtualbox-iso: 2015/11/08 03:05:17 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:05:22 packer-builder-virtualbox-iso: 2015/11/08 03:05:22 Attempting SSH connection...
+2015/11/08 03:05:22 packer-builder-virtualbox-iso: 2015/11/08 03:05:22 reconnecting to TCP connection for SSH
+2015/11/08 03:05:22 packer-builder-virtualbox-iso: 2015/11/08 03:05:22 handshaking with SSH
+2015/11/08 03:05:22 packer-builder-virtualbox-iso: 2015/11/08 03:05:22 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:05:22 packer-builder-virtualbox-iso: 2015/11/08 03:05:22 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:05:27 packer-builder-virtualbox-iso: 2015/11/08 03:05:27 Attempting SSH connection...
+2015/11/08 03:05:27 packer-builder-virtualbox-iso: 2015/11/08 03:05:27 reconnecting to TCP connection for SSH
+2015/11/08 03:05:27 packer-builder-virtualbox-iso: 2015/11/08 03:05:27 handshaking with SSH
+2015/11/08 03:05:27 packer-builder-virtualbox-iso: 2015/11/08 03:05:27 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:05:27 packer-builder-virtualbox-iso: 2015/11/08 03:05:27 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:05:32 packer-builder-virtualbox-iso: 2015/11/08 03:05:32 Attempting SSH connection...
+2015/11/08 03:05:32 packer-builder-virtualbox-iso: 2015/11/08 03:05:32 reconnecting to TCP connection for SSH
+2015/11/08 03:05:32 packer-builder-virtualbox-iso: 2015/11/08 03:05:32 handshaking with SSH
+2015/11/08 03:05:32 packer-builder-virtualbox-iso: 2015/11/08 03:05:32 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:05:32 packer-builder-virtualbox-iso: 2015/11/08 03:05:32 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:05:37 packer-builder-virtualbox-iso: 2015/11/08 03:05:37 Attempting SSH connection...
+2015/11/08 03:05:37 packer-builder-virtualbox-iso: 2015/11/08 03:05:37 reconnecting to TCP connection for SSH
+2015/11/08 03:05:37 packer-builder-virtualbox-iso: 2015/11/08 03:05:37 handshaking with SSH
+2015/11/08 03:05:37 packer-builder-virtualbox-iso: 2015/11/08 03:05:37 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:05:37 packer-builder-virtualbox-iso: 2015/11/08 03:05:37 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:05:42 packer-builder-virtualbox-iso: 2015/11/08 03:05:42 Attempting SSH connection...
+2015/11/08 03:05:42 packer-builder-virtualbox-iso: 2015/11/08 03:05:42 reconnecting to TCP connection for SSH
+2015/11/08 03:05:42 packer-builder-virtualbox-iso: 2015/11/08 03:05:42 handshaking with SSH
+2015/11/08 03:05:42 packer-builder-virtualbox-iso: 2015/11/08 03:05:42 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:05:42 packer-builder-virtualbox-iso: 2015/11/08 03:05:42 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:05:47 packer-builder-virtualbox-iso: 2015/11/08 03:05:47 Attempting SSH connection...
+2015/11/08 03:05:47 packer-builder-virtualbox-iso: 2015/11/08 03:05:47 reconnecting to TCP connection for SSH
+2015/11/08 03:05:47 packer-builder-virtualbox-iso: 2015/11/08 03:05:47 handshaking with SSH
+2015/11/08 03:05:47 packer-builder-virtualbox-iso: 2015/11/08 03:05:47 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:05:47 packer-builder-virtualbox-iso: 2015/11/08 03:05:47 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:05:52 packer-builder-virtualbox-iso: 2015/11/08 03:05:52 Attempting SSH connection...
+2015/11/08 03:05:52 packer-builder-virtualbox-iso: 2015/11/08 03:05:52 reconnecting to TCP connection for SSH
+2015/11/08 03:05:52 packer-builder-virtualbox-iso: 2015/11/08 03:05:52 handshaking with SSH
+2015/11/08 03:05:52 packer-builder-virtualbox-iso: 2015/11/08 03:05:52 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:05:52 packer-builder-virtualbox-iso: 2015/11/08 03:05:52 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:05:57 packer-builder-virtualbox-iso: 2015/11/08 03:05:57 Attempting SSH connection...
+2015/11/08 03:05:57 packer-builder-virtualbox-iso: 2015/11/08 03:05:57 reconnecting to TCP connection for SSH
+2015/11/08 03:05:57 packer-builder-virtualbox-iso: 2015/11/08 03:05:57 handshaking with SSH
+2015/11/08 03:05:57 packer-builder-virtualbox-iso: 2015/11/08 03:05:57 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:05:57 packer-builder-virtualbox-iso: 2015/11/08 03:05:57 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:06:02 packer-builder-virtualbox-iso: 2015/11/08 03:06:02 Attempting SSH connection...
+2015/11/08 03:06:02 packer-builder-virtualbox-iso: 2015/11/08 03:06:02 reconnecting to TCP connection for SSH
+2015/11/08 03:06:02 packer-builder-virtualbox-iso: 2015/11/08 03:06:02 handshaking with SSH
+2015/11/08 03:06:02 packer-builder-virtualbox-iso: 2015/11/08 03:06:02 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:06:02 packer-builder-virtualbox-iso: 2015/11/08 03:06:02 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:06:07 packer-builder-virtualbox-iso: 2015/11/08 03:06:07 Attempting SSH connection...
+2015/11/08 03:06:07 packer-builder-virtualbox-iso: 2015/11/08 03:06:07 reconnecting to TCP connection for SSH
+2015/11/08 03:06:07 packer-builder-virtualbox-iso: 2015/11/08 03:06:07 handshaking with SSH
+2015/11/08 03:06:07 packer-builder-virtualbox-iso: 2015/11/08 03:06:07 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:06:07 packer-builder-virtualbox-iso: 2015/11/08 03:06:07 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:06:12 packer-builder-virtualbox-iso: 2015/11/08 03:06:12 Attempting SSH connection...
+2015/11/08 03:06:12 packer-builder-virtualbox-iso: 2015/11/08 03:06:12 reconnecting to TCP connection for SSH
+2015/11/08 03:06:12 packer-builder-virtualbox-iso: 2015/11/08 03:06:12 handshaking with SSH
+2015/11/08 03:06:12 packer-builder-virtualbox-iso: 2015/11/08 03:06:12 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:06:12 packer-builder-virtualbox-iso: 2015/11/08 03:06:12 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:06:17 packer-builder-virtualbox-iso: 2015/11/08 03:06:17 Attempting SSH connection...
+2015/11/08 03:06:17 packer-builder-virtualbox-iso: 2015/11/08 03:06:17 reconnecting to TCP connection for SSH
+2015/11/08 03:06:17 packer-builder-virtualbox-iso: 2015/11/08 03:06:17 handshaking with SSH
+2015/11/08 03:06:17 packer-builder-virtualbox-iso: 2015/11/08 03:06:17 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:06:17 packer-builder-virtualbox-iso: 2015/11/08 03:06:17 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:06:22 packer-builder-virtualbox-iso: 2015/11/08 03:06:22 Attempting SSH connection...
+2015/11/08 03:06:22 packer-builder-virtualbox-iso: 2015/11/08 03:06:22 reconnecting to TCP connection for SSH
+2015/11/08 03:06:22 packer-builder-virtualbox-iso: 2015/11/08 03:06:22 handshaking with SSH
+2015/11/08 03:06:22 packer-builder-virtualbox-iso: 2015/11/08 03:06:22 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:06:22 packer-builder-virtualbox-iso: 2015/11/08 03:06:22 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:06:27 packer-builder-virtualbox-iso: 2015/11/08 03:06:27 Attempting SSH connection...
+2015/11/08 03:06:27 packer-builder-virtualbox-iso: 2015/11/08 03:06:27 reconnecting to TCP connection for SSH
+2015/11/08 03:06:27 packer-builder-virtualbox-iso: 2015/11/08 03:06:27 handshaking with SSH
+2015/11/08 03:06:27 packer-builder-virtualbox-iso: 2015/11/08 03:06:27 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:06:27 packer-builder-virtualbox-iso: 2015/11/08 03:06:27 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:06:32 packer-builder-virtualbox-iso: 2015/11/08 03:06:32 Attempting SSH connection...
+2015/11/08 03:06:32 packer-builder-virtualbox-iso: 2015/11/08 03:06:32 reconnecting to TCP connection for SSH
+2015/11/08 03:06:32 packer-builder-virtualbox-iso: 2015/11/08 03:06:32 handshaking with SSH
+2015/11/08 03:06:32 packer-builder-virtualbox-iso: 2015/11/08 03:06:32 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:06:32 packer-builder-virtualbox-iso: 2015/11/08 03:06:32 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:06:37 packer-builder-virtualbox-iso: 2015/11/08 03:06:37 Attempting SSH connection...
+2015/11/08 03:06:37 packer-builder-virtualbox-iso: 2015/11/08 03:06:37 reconnecting to TCP connection for SSH
+2015/11/08 03:06:37 packer-builder-virtualbox-iso: 2015/11/08 03:06:37 handshaking with SSH
+2015/11/08 03:06:37 packer-builder-virtualbox-iso: 2015/11/08 03:06:37 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:06:37 packer-builder-virtualbox-iso: 2015/11/08 03:06:37 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:06:42 packer-builder-virtualbox-iso: 2015/11/08 03:06:42 Attempting SSH connection...
+2015/11/08 03:06:42 packer-builder-virtualbox-iso: 2015/11/08 03:06:42 reconnecting to TCP connection for SSH
+2015/11/08 03:06:42 packer-builder-virtualbox-iso: 2015/11/08 03:06:42 handshaking with SSH
+2015/11/08 03:06:42 packer-builder-virtualbox-iso: 2015/11/08 03:06:42 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:06:42 packer-builder-virtualbox-iso: 2015/11/08 03:06:42 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:06:47 packer-builder-virtualbox-iso: 2015/11/08 03:06:47 Attempting SSH connection...
+2015/11/08 03:06:47 packer-builder-virtualbox-iso: 2015/11/08 03:06:47 reconnecting to TCP connection for SSH
+2015/11/08 03:06:47 packer-builder-virtualbox-iso: 2015/11/08 03:06:47 handshaking with SSH
+2015/11/08 03:06:47 packer-builder-virtualbox-iso: 2015/11/08 03:06:47 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:06:47 packer-builder-virtualbox-iso: 2015/11/08 03:06:47 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:06:52 packer-builder-virtualbox-iso: 2015/11/08 03:06:52 Attempting SSH connection...
+2015/11/08 03:06:52 packer-builder-virtualbox-iso: 2015/11/08 03:06:52 reconnecting to TCP connection for SSH
+2015/11/08 03:06:52 packer-builder-virtualbox-iso: 2015/11/08 03:06:52 handshaking with SSH
+2015/11/08 03:06:52 packer-builder-virtualbox-iso: 2015/11/08 03:06:52 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:06:52 packer-builder-virtualbox-iso: 2015/11/08 03:06:52 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:06:57 packer-builder-virtualbox-iso: 2015/11/08 03:06:57 Attempting SSH connection...
+2015/11/08 03:06:57 packer-builder-virtualbox-iso: 2015/11/08 03:06:57 reconnecting to TCP connection for SSH
+2015/11/08 03:06:57 packer-builder-virtualbox-iso: 2015/11/08 03:06:57 handshaking with SSH
+2015/11/08 03:06:57 packer-builder-virtualbox-iso: 2015/11/08 03:06:57 handshake error: ssh: handshake failed: read tcp 127.0.0.1:3957: connection reset by peer
+2015/11/08 03:06:57 packer-builder-virtualbox-iso: 2015/11/08 03:06:57 SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:3957: connection reset by peer
+2015/11/08 03:07:02 packer-builder-virtualbox-iso: 2015/11/08 03:07:02 Attempting SSH connection...
+2015/11/08 03:07:02 packer-builder-virtualbox-iso: 2015/11/08 03:07:02 reconnecting to TCP connection for SSH
+2015/11/08 03:07:02 packer-builder-virtualbox-iso: 2015/11/08 03:07:02 handshaking with SSH
+2015/11/08 03:07:02 packer-builder-virtualbox-iso: 2015/11/08 03:07:02 handshake error: ssh: handshake failed: EOF
+2015/11/08 03:07:02 packer-builder-virtualbox-iso: 2015/11/08 03:07:02 SSH handshake err: ssh: handshake failed: EOF
+2015/11/08 03:07:07 packer-builder-virtualbox-iso: 2015/11/08 03:07:07 Attempting SSH connection...
+2015/11/08 03:07:07 packer-builder-virtualbox-iso: 2015/11/08 03:07:07 reconnecting to TCP connection for SSH
+2015/11/08 03:07:07 packer-builder-virtualbox-iso: 2015/11/08 03:07:07 handshaking with SSH
+2015/11/08 03:07:26 ui: [1;32m==> virtualbox-iso: Connected to SSH![0m
+2015/11/08 03:07:26 packer-builder-virtualbox-iso: 2015/11/08 03:07:26 VBoxManage --version output: 5.0.8r103449
+2015/11/08 03:07:26 packer-builder-virtualbox-iso: 2015/11/08 03:07:26 VirtualBox version: 5.0.8
+2015/11/08 03:07:26 ui: [1;32m==> virtualbox-iso: Uploading VirtualBox version info (5.0.8)[0m
+2015/11/08 03:07:26 packer-builder-virtualbox-iso: 2015/11/08 03:07:26 opening new ssh session
+2015/11/08 03:07:26 packer-builder-virtualbox-iso: 2015/11/08 03:07:26 Starting remote scp process:  scp -vt .
+2015/11/08 03:07:26 packer-builder-virtualbox-iso: 2015/11/08 03:07:26 Started SCP session, beginning transfers...
+2015/11/08 03:07:26 packer-builder-virtualbox-iso: 2015/11/08 03:07:26 Copying input data into temporary file so we can read the length
+2015/11/08 03:07:26 packer-builder-virtualbox-iso: 2015/11/08 03:07:26 [DEBUG] Uploading .vbox_version: perms=C0644 size=5
+2015/11/08 03:07:26 packer-builder-virtualbox-iso: 2015/11/08 03:07:26 SCP session complete, closing stdin pipe.
+2015/11/08 03:07:26 packer-builder-virtualbox-iso: 2015/11/08 03:07:26 Waiting for SSH session to complete.
+2015/11/08 03:07:26 packer-builder-virtualbox-iso: 2015/11/08 03:07:26 scp stderr (length 28): Sink: C0644 5 .vbox_version
+2015/11/08 03:07:26 packer-builder-virtualbox-iso: 2015/11/08 03:07:26 VBoxManage --version output: 5.0.8r103449
+2015/11/08 03:07:26 packer-builder-virtualbox-iso: 2015/11/08 03:07:26 VirtualBox version: 5.0.8
+2015/11/08 03:07:26 ui: [1;32m==> virtualbox-iso: Uploading VirtualBox guest additions ISO...[0m
+2015/11/08 03:07:26 packer-builder-virtualbox-iso: 2015/11/08 03:07:26 opening new ssh session
+2015/11/08 03:07:26 packer-builder-virtualbox-iso: 2015/11/08 03:07:26 Starting remote scp process:  scp -vt .
+2015/11/08 03:07:26 packer-builder-virtualbox-iso: 2015/11/08 03:07:26 Started SCP session, beginning transfers...
+2015/11/08 03:07:26 packer-builder-virtualbox-iso: 2015/11/08 03:07:26 Copying input data into temporary file so we can read the length
+2015/11/08 03:07:26 packer-builder-virtualbox-iso: 2015/11/08 03:07:26 [DEBUG] Uploading VBoxGuestAdditions_5.0.8.iso: perms=C0644 size=58992640
+2015/11/08 03:07:27 packer-builder-virtualbox-iso: 2015/11/08 03:07:27 SCP session complete, closing stdin pipe.
+2015/11/08 03:07:27 packer-builder-virtualbox-iso: 2015/11/08 03:07:27 Waiting for SSH session to complete.
+2015/11/08 03:07:27 packer-builder-virtualbox-iso: 2015/11/08 03:07:27 scp stderr (length 50): Sink: C0644 58992640 VBoxGuestAdditions_5.0.8.iso
+2015/11/08 03:07:27 packer-builder-virtualbox-iso: 2015/11/08 03:07:27 Running the provision hook
+2015/11/08 03:07:27 ui: [1;32m==> virtualbox-iso: Gracefully halting virtual machine...[0m
+2015/11/08 03:07:27 packer-builder-virtualbox-iso: 2015/11/08 03:07:27 Executing shutdown command: echo 'vagrant' | sudo -S shutdown -P now
+2015/11/08 03:07:27 packer-builder-virtualbox-iso: 2015/11/08 03:07:27 opening new ssh session
+2015/11/08 03:07:27 packer-builder-virtualbox-iso: 2015/11/08 03:07:27 starting remote command: echo 'vagrant' | sudo -S shutdown -P now
+2015/11/08 03:07:27 ui: [0;32m    virtualbox-iso: [0m
+2015/11/08 03:07:27 ui: [0;32m    virtualbox-iso: Broadcast message from vagrant@localhost.localdomain[0m
+2015/11/08 03:07:27 ui: [0;32m    virtualbox-iso: (unknown) at 3:07 ...[0m
+2015/11/08 03:07:27 ui: [0;32m    virtualbox-iso:[0m
+2015/11/08 03:07:27 ui: [0;32m    virtualbox-iso: The system is going down for power off NOW![0m
+2015/11/08 03:07:27 packer-builder-virtualbox-iso: 2015/11/08 03:07:27 remote command exited with '0': echo 'vagrant' | sudo -S shutdown -P now
+2015/11/08 03:07:27 packer-builder-virtualbox-iso: 2015/11/08 03:07:27 Waiting max 5m0s for shutdown to complete
+2015/11/08 03:07:33 packer-builder-virtualbox-iso: 2015/11/08 03:07:33 VM shut down.
+2015/11/08 03:07:33 packer-builder-virtualbox-iso: 2015/11/08 03:07:33 Executing VBoxManage: []string{"storageattach", "centos6", "--storagectl", "IDE Controller", "--port", "0", "--device", "1", "--medium", "none"}
+2015/11/08 03:07:33 packer-builder-virtualbox-iso: 2015/11/08 03:07:33 stdout:
+2015/11/08 03:07:33 packer-builder-virtualbox-iso: 2015/11/08 03:07:33 stderr:
+2015/11/08 03:07:33 packer-builder-virtualbox-iso: 2015/11/08 03:07:33 1 second timeout to ensure VM is really shutdown
+2015/11/08 03:07:34 ui: [1;32m==> virtualbox-iso: Preparing to export machine...[0m
+2015/11/08 03:07:34 ui: [0;32m    virtualbox-iso: Deleting forwarded port mapping for SSH (host port 3957)[0m
+2015/11/08 03:07:34 packer-builder-virtualbox-iso: 2015/11/08 03:07:34 Executing VBoxManage: []string{"modifyvm", "centos6", "--natpf1", "delete", "packerssh"}
+2015/11/08 03:07:34 packer-builder-virtualbox-iso: 2015/11/08 03:07:34 stdout:
+2015/11/08 03:07:34 packer-builder-virtualbox-iso: 2015/11/08 03:07:34 stderr:
+2015/11/08 03:07:34 ui: [1;32m==> virtualbox-iso: Exporting virtual machine...[0m
+2015/11/08 03:07:34 ui: [0;32m    virtualbox-iso: Executing: export centos6 --output output-virtualbox-iso/centos6.ovf[0m
+2015/11/08 03:07:34 packer-builder-virtualbox-iso: 2015/11/08 03:07:34 Executing VBoxManage: []string{"export", "centos6", "--output", "output-virtualbox-iso/centos6.ovf"}
+2015/11/08 03:08:36 packer-builder-virtualbox-iso: 2015/11/08 03:08:36 stdout: Successfully exported 1 machine(s).
+2015/11/08 03:08:36 packer-builder-virtualbox-iso: 2015/11/08 03:08:36 stderr: 0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100%
+2015/11/08 03:08:36 packer-builder-virtualbox-iso: 2015/11/08 03:08:36 Executing VBoxManage: []string{"storageattach", "centos6", "--storagectl", "IDE Controller", "--port", "0", "--device", "1", "--medium", "none"}
+2015/11/08 03:08:36 packer-builder-virtualbox-iso: 2015/11/08 03:08:36 stdout:
+2015/11/08 03:08:36 packer-builder-virtualbox-iso: 2015/11/08 03:08:36 stderr: VBoxManage: error: No storage device attached to device slot 1 on port 0 of controller 'IDE Controller'
+2015/11/08 03:08:36 packer-builder-virtualbox-iso: VBoxManage: error: Details: code VBOX_E_OBJECT_NOT_FOUND (0x80bb0001), component SessionMachine, interface IMachine, callee nsISupports
+2015/11/08 03:08:36 packer-builder-virtualbox-iso: VBoxManage: error: Context: "DetachDevice(Bstr(pszCtl).raw(), port, device)" at line 393 of file VBoxManageStorageController.cpp
+2015/11/08 03:08:36 ui: [1;32m==> virtualbox-iso: Unregistering and deleting virtual machine...[0m
+2015/11/08 03:08:36 packer-builder-virtualbox-iso: 2015/11/08 03:08:36 Executing VBoxManage: []string{"unregistervm", "centos6", "--delete"}
+2015/11/08 03:08:36 packer-builder-virtualbox-iso: 2015/11/08 03:08:36 stdout:
+2015/11/08 03:08:36 packer-builder-virtualbox-iso: 2015/11/08 03:08:36 stderr: 0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100%
+2015/11/08 03:08:36 ui: [1;32m==> virtualbox-iso: Running post-processor: vagrant[0m
+2015/11/08 03:08:36 ui: [1;32m==> virtualbox-iso (vagrant): Creating Vagrant box for 'virtualbox' provider[0m
+2015/11/08 03:08:36 ui: [0;32m    virtualbox-iso (vagrant): Copying from artifact: output-virtualbox-iso/centos6-disk1.vmdk[0m
+2015/11/08 03:08:37 ui: [0;32m    virtualbox-iso (vagrant): Copying from artifact: output-virtualbox-iso/centos6.ovf[0m
+2015/11/08 03:08:37 ui: [0;32m    virtualbox-iso (vagrant): Renaming the OVF to box.ovf...[0m
+2015/11/08 03:08:37 packer-post-processor-vagrant: 2015/11/08 03:08:37 Looking for OVF to rename...
+2015/11/08 03:08:37 packer-post-processor-vagrant: 2015/11/08 03:08:37 Looking for OVF in artifact...
+2015/11/08 03:08:37 packer-post-processor-vagrant: 2015/11/08 03:08:37 Renaming: '/var/folders/k4/62jf9fld7y9_mpwtc4y508h80000gn/T/packer394045815/centos6.ovf' => box.ovf
+2015/11/08 03:08:37 packer-post-processor-vagrant: 2015/11/08 03:08:37 Looking for OVF for base mac address...
+2015/11/08 03:08:37 packer-post-processor-vagrant: 2015/11/08 03:08:37 Looking for OVF in artifact...
+2015/11/08 03:08:37 packer-post-processor-vagrant: 2015/11/08 03:08:37 Base mac address: 0800270C3789
+2015/11/08 03:08:37 packer-post-processor-vagrant: 2015/11/08 03:08:37 Turning dir into box: /var/folders/k4/62jf9fld7y9_mpwtc4y508h80000gn/T/packer394045815 => CentOS-6.7-x86_64-minimal.box
+2015/11/08 03:08:37 packer-post-processor-vagrant: 2015/11/08 03:08:37 Compressing with gzip compression level: -1
+2015/11/08 03:08:37 packer-post-processor-vagrant: 2015/11/08 03:08:37 Skipping directory '/var/folders/k4/62jf9fld7y9_mpwtc4y508h80000gn/T/packer394045815' for box 'CentOS-6.7-x86_64-minimal.box'
+2015/11/08 03:08:37 packer-post-processor-vagrant: 2015/11/08 03:08:37 Box add: '/var/folders/k4/62jf9fld7y9_mpwtc4y508h80000gn/T/packer394045815/Vagrantfile' to 'CentOS-6.7-x86_64-minimal.box'
+2015/11/08 03:08:37 ui: [0;32m    virtualbox-iso (vagrant): Compressing: Vagrantfile[0m
+2015/11/08 03:08:37 packer-post-processor-vagrant: 2015/11/08 03:08:37 Box add: '/var/folders/k4/62jf9fld7y9_mpwtc4y508h80000gn/T/packer394045815/box.ovf' to 'CentOS-6.7-x86_64-minimal.box'
+2015/11/08 03:08:37 ui: [0;32m    virtualbox-iso (vagrant): Compressing: box.ovf[0m
+2015/11/08 03:08:37 packer-post-processor-vagrant: 2015/11/08 03:08:37 Box add: '/var/folders/k4/62jf9fld7y9_mpwtc4y508h80000gn/T/packer394045815/centos6-disk1.vmdk' to 'CentOS-6.7-x86_64-minimal.box'
+2015/11/08 03:08:37 ui: [0;32m    virtualbox-iso (vagrant): Compressing: centos6-disk1.vmdk[0m
+2015/11/08 03:09:22 packer-post-processor-vagrant: 2015/11/08 03:09:22 Box add: '/var/folders/k4/62jf9fld7y9_mpwtc4y508h80000gn/T/packer394045815/metadata.json' to 'CentOS-6.7-x86_64-minimal.box'
+2015/11/08 03:09:22 ui: [0;32m    virtualbox-iso (vagrant): Compressing: metadata.json[0m
+2015/11/08 03:09:22 Deleting original artifact for build 'virtualbox-iso'
+2015/11/08 03:09:22 ui: [1;32mBuild 'virtualbox-iso' finished.[0m
+2015/11/08 03:09:22 Builds completed. Waiting on interrupt barrier...
+2015/11/08 03:09:22 ui: 
+==> Builds finished. The artifacts of successful builds are:
+2015/11/08 03:09:22 machine readable: virtualbox-iso,artifact-count []string{"1"}
+2015/11/08 03:09:22 machine readable: virtualbox-iso,artifact []string{"0", "builder-id", "mitchellh.post-processor.vagrant"}
+2015/11/08 03:09:22 machine readable: virtualbox-iso,artifact []string{"0", "id", "virtualbox"}
+2015/11/08 03:09:22 machine readable: virtualbox-iso,artifact []string{"0", "string", "'virtualbox' provider box: CentOS-6.7-x86_64-minimal.box"}
+2015/11/08 03:09:22 machine readable: virtualbox-iso,artifact []string{"0", "files-count", "1"}
+2015/11/08 03:09:22 machine readable: virtualbox-iso,artifact []string{"0", "file", "0", "CentOS-6.7-x86_64-minimal.box"}
+2015/11/08 03:09:22 machine readable: virtualbox-iso,artifact []string{"0", "end"}
+2015/11/08 03:09:22 ui: --> virtualbox-iso: 'virtualbox' provider box: CentOS-6.7-x86_64-minimal.box
+2015/11/08 03:09:22 waiting for all plugin processes to complete...
+2015/11/08 03:09:22 /usr/local/bin/packer-post-processor-vagrant: plugin process exited
+2015/11/08 03:09:22 /usr/local/bin/packer-builder-virtualbox-iso: plugin process exited

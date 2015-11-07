@@ -1,0 +1,38 @@
+{
+  "builders": [
+    {
+      "type": "vmware-iso",
+      "vm_name": "centos6",
+      "iso_url": "http://ftp.riken.jp/Linux/centos/6.7/isos/x86_64/CentOS-6.7-x86_64-minimal.iso",
+      "iso_checksum": "9381a24b8bee2fed0c26896141a64b69",
+      "iso_checksum_type": "md5",
+      "ssh_username": "vagrant",
+      "ssh_password": "vagrant",
+      "ssh_port": 22,
+      "ssh_wait_timeout": "10000s",
+      "http_directory": "http",
+      "http_port_min": 10082,
+      "http_port_max": 10089,
+      "ssh_port": 22,
+      "ssh_wait_timeout": "10000s",
+      "disk_size": 102400,
+      "shutdown_command": "echo 'vagrant' | sudo -S shutdown -P now",
+      "tools_upload_flavor": "linux",
+      "vmx_data": {
+        "memsize": "1024",
+        "numvcpus": "2",
+        "vhv.enable": "TRUE"
+      },
+      "boot_wait": "10s",
+      "boot_command": [
+        "<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/centos6-ks.cfg<enter><wait>"
+      ]
+    }
+  ],
+  "post-processors": [
+    {
+      "type": "vagrant",
+      "output": "CentOS-6.7-x86_64-minimal-{{.Provider}}.box"
+    }
+  ]
+}

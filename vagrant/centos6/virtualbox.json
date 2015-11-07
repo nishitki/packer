@@ -1,0 +1,39 @@
+{
+  "builders": [
+    {
+      "type": "virtualbox-iso",
+      "vm_name": "centos6",
+      "guest_os_type": "RedHat_64",
+      "iso_url": "http://ftp.riken.jp/Linux/centos/6.7/isos/x86_64/CentOS-6.7-x86_64-minimal.iso",
+      "iso_checksum": "9381a24b8bee2fed0c26896141a64b69",
+      "iso_checksum_type": "md5",
+      "ssh_username": "vagrant",
+      "ssh_password": "vagrant",
+      "http_directory": "http",
+      "http_port_min": 10082,
+      "ssh_port": 22,
+      "ssh_wait_timeout": "10000s",
+      "http_port_max": 10089,
+      "disk_size": 10240,
+      "shutdown_command": "echo 'vagrant' | sudo -S shutdown -P now",
+      "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
+      "virtualbox_version_file": ".vbox_version",
+      "vboxmanage": [
+        ["modifyvm", "{{.Name}}", "--memory", "512"],
+        ["modifyvm", "{{.Name}}", "--cpus", "1"]
+      ],
+      "boot_wait": "10s",
+      "boot_command": [
+        "<esc><wait>",
+        "linux text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/centos6-ks.cfg",
+        "<enter>"
+      ]
+    }
+  ],
+  "post-processors": [
+    {
+      "type": "vagrant",
+      "output": "CentOS-6.7-x86_64-minimal.box"
+    } 
+  ]
+}
